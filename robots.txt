@@ -22,7 +22,7 @@ Allow: /
 Disallow: /node_modules/
 
 # Sitemap
-Sitemap: https://wovtech.sk/sitemap.xml
+Sitemap: https://test.wovtech.sk/sitemap.xml
 
 # Crawl delay (ms)
 Crawl-delay: 1

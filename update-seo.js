@@ -35,7 +35,7 @@ const twitterCardTemplate = `  <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="TITLE_PLACEHOLDER" />
   <meta name="twitter:description" content="DESCRIPTION_PLACEHOLDER" />
-  <meta name="twitter:image" content="https://wovtech.sk/assets/img/logo-full.png" />`;
+  <meta name="twitter:image" content="https://test.wovtech.sk/assets/img/logo-full.png" />`;
 
 // OpenGraph template
 const ogTemplate = `  <!-- Open Graph Meta Tags -->
@@ -43,14 +43,14 @@ const ogTemplate = `  <!-- Open Graph Meta Tags -->
   <meta property="og:description" content="DESCRIPTION_PLACEHOLDER" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="URL_PLACEHOLDER" />
-  <meta property="og:image" content="https://wovtech.sk/assets/img/logo-full.png" />
+  <meta property="og:image" content="https://test.wovtech.sk/assets/img/logo-full.png" />
   <meta property="og:image:width" content="800" />
   <meta property="og:image:height" content="412" />`;
 
 function updateMetadata(filePath, config) {
   let content = fs.readFileSync(filePath, 'utf-8');
   const filename = path.basename(filePath);
-  const baseUrl = 'https://wovtech.sk/';
+  const baseUrl = 'https://test.wovtech.sk/';
   const fileUrl = baseUrl + filename;
 
   // Update meta description

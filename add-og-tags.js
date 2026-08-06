@@ -32,7 +32,7 @@ function extractPageInfo(content, filePath) {
   const description = descMatch ? descMatch[1] : 'WOV Tech s. r. o. - IT infraštruktúra';
 
   // Get URL from canonical or construct it
-  let url = 'https://wovtech.sk/';
+  let url = 'https://test.wovtech.sk/';
   const canonicalMatch = content.match(/<link rel="canonical" href="([^"]+)"/);
   if (canonicalMatch) {
     url = canonicalMatch[1];
@@ -52,7 +52,7 @@ function addOpenGraphAndTwitter(content, pageInfo) {
   <meta property="og:description" content="${pageInfo.description.replace(/"/g, '&quot;')}" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="${pageInfo.url}" />
-  <meta property="og:image" content="https://wovtech.sk/assets/img/logo-full.png" />
+  <meta property="og:image" content="https://test.wovtech.sk/assets/img/logo-full.png" />
   <meta property="og:image:width" content="800" />
   <meta property="og:image:height" content="412" />
 
@@ -60,7 +60,7 @@ function addOpenGraphAndTwitter(content, pageInfo) {
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="${pageInfo.title.replace(/"/g, '&quot;')}" />
   <meta name="twitter:description" content="${pageInfo.description.replace(/"/g, '&quot;')}" />
-  <meta name="twitter:image" content="https://wovtech.sk/assets/img/logo-full.png" />`;
+  <meta name="twitter:image" content="https://test.wovtech.sk/assets/img/logo-full.png" />`;
 
   // Insert after canonical link
   const finalContent = content.replace(
