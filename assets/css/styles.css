@@ -402,12 +402,6 @@ main#content::after{
   pointer-events:none;
 }
 
-@media (min-width: 1100px){
-  main#content::before{
-    background-attachment: fixed;
-  }
-}
-
 main#content > *{
   position: relative;
   z-index:2;
@@ -1052,6 +1046,21 @@ main#content a.cta.small::after{
     text-align:center !important;
     gap:2px !important;
     transform:none !important;
+  }
+}
+
+/* Na menších zariadeniach šetríme GPU pri scrollovaní. */
+@media (max-width: 700px){
+  .header,
+  .footer,
+  .hero .card,
+  .section .card,
+  .section .service,
+  .section .notice,
+  .section .code,
+  .section .badge{
+    backdrop-filter:none !important;
+    -webkit-backdrop-filter:none !important;
   }
 }
 .section .card .list a{

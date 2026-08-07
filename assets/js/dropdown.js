@@ -41,17 +41,17 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    document.addEventListener('click', (event) => {
-      if (!dropdown.contains(event.target)) {
-        close();
-      }
-    });
-
     dropdown.addEventListener('keydown', (event) => {
       if (event.key === 'Escape') {
         close();
         trigger.focus();
       }
+    });
+  });
+
+  document.addEventListener('click', (event) => {
+    dropdowns.forEach((dropdown) => {
+      if (!dropdown.contains(event.target)) closeDropdown(dropdown);
     });
   });
 });
