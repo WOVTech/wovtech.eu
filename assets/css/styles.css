@@ -458,6 +458,7 @@ main#content > *{
 }
 
 .avatar{
+  position: relative;
   width: 96px;
   height: 96px;
   border-radius: 50%;
@@ -473,6 +474,21 @@ main#content > *{
   font-size: 22px;
   letter-spacing: .08em;
   text-transform: uppercase;
+  overflow: hidden;
+}
+
+.avatar img{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.avatar span{
+  position: relative;
+  z-index: 1;
 }
 
 .two-col{
