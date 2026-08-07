@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <link rel="icon" href="/assets/img/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Articles about IT infrastructure | WOV Tech</title>
+
+  <meta name="description" content="Practical articles about IT infrastructure: monitoring, logs, backups, NTP, identity, incidents, changes, networking and documentation." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://wovtech.eu/articles/" />
+  <link rel="alternate" hreflang="en" href="https://wovtech.eu/articles/" />
+  <link rel="alternate" hreflang="sk" href="https://wovtech.sk/clanky/" />
+  <link rel="alternate" hreflang="x-default" href="https://wovtech.eu/articles/" />
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Articles about IT infrastructure | WOV Tech" />
+  <meta property="og:description" content="Practical articles and recommendations on the design and stabilization of IT infrastructure." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://wovtech.eu/articles/" />
+  <meta property="og:locale" content="en_GB" />
+  <meta property="og:image" content="https://wovtech.eu/assets/img/logo-full.png" />
+  <meta property="og:image:width" content="800" />
+  <meta property="og:image:height" content="412" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Articles about IT infrastructure | WOV Tech" />
+  <meta name="twitter:description" content="Practical articles and recommendations for IT infrastructure." />
+  <meta name="twitter:image" content="https://wovtech.eu/assets/img/logo-full.png" />
+
+  <meta name="theme-color" content="#0b1220" />
+  <link rel="preload" href="/assets/img/hero-laptop.webp" as="image" type="image/webp" fetchpriority="high" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+
+  <style>
+    .article-links and {
+      color: #9ec5ff !important;
+      font-weight: 700;
+      text-decoration: underline;
+      text-decoration-color: rgba(158, 197, 255, 0.45);
+      text-underline-offset: 3px;
+      transition: color .15s ease, text-decoration-color .15s ease;
+    }
+
+    .article-links a:hover {
+      color: #c7ddff !important;
+      text-decoration-color: rgba(199, 221, 255, 0.85);
+    }
+  </style>
+</head>
+<body>
+  <script src="/assets/js/dropdown.js" defer></script>
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <header class="header">
+    <div class="container">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="/">
+          <img class="brand-logo" src="/assets/img/logo-mark.png" alt="WOV Tech logo" width="36" height="36" />
+          <span>WOV Tech <span class="sub">IT done right</span></span>
+        </a>
+        <div class="menu">
+          <a href="/" aria-label="Home">Home</a>
+          <div class="dropdown" data-dropdown>
+            <a href="/services/" class="drop-trigger" data-dropdown-trigger>Services ▾</a>
+            <div class="submenu" role="menu" data-dropdown-menu>
+              <span class="submenu-title">Individual services</span>
+              <a href="/services/">All services</a>
+              <a href="/services/infrastructure-design.html">IT infrastructure design</a>
+              <a href="/services/cloud-aws-azure.html">Cloud: AWS, Azure and GCP</a>
+              <a href="/services/infrastructure-monitoring.html">Infrastructure monitoring</a>
+              <a href="/services/log-management.html">Log management</a>
+              <a href="/services/backup-and-recovery.html">Backup and recovery</a>
+              <a href="/services/it-support.html">IT support</a>
+              <a href="/services/ddi-dns-dhcp-ipam.html">DDI / DNS / DHCP / IPAM</a>
+              <a href="/services/ntp.html">NTP</a>
+            </div>
+          </div>
+          <div class="dropdown" data-dropdown>
+            <a href="/articles/" class="drop-trigger" data-dropdown-trigger>Articles ▾</a>
+            <div class="submenu" role="menu" data-dropdown-menu>
+              <span class="submenu-title">Articles</span>
+              <a href="/articles/">All articles</a>
+              <a href="/articles/monitoring-vs-logs.html">Monitoring vs. logs</a>
+              <a href="/articles/backup-and-recovery.html">Backup and recovery</a>
+              <a href="/articles/why-accurate-time-is-critical.html">NTP: why correct time is critical</a>
+              <a href="/articles/incident-and-change-processes.html">Incidents and changes</a>
+              <a href="/articles/access-and-identity.html">Access and identity</a>
+              <a href="/articles/networking-in-infrastructure-design.html">Networking in infrastructure design</a>
+              <a href="/articles/documentation-and-runbooks.html">Documentation and runbooks</a>
+            </div>
+          </div>
+          <div class="dropdown" data-dropdown>
+            <a href="/guides/" class="drop-trigger" data-dropdown-trigger>Guides ▾</a>
+            <div class="submenu" role="menu" data-dropdown-menu>
+              <span class="submenu-title">Guides and checklists</span>
+              <a href="/guides/">All guides</a>
+              <a href="/guides/ddi-dns-dhcp-ipam.html">DDI / DNS / DHCP / IPAM — network services</a>
+              <a href="/guides/ntp.html">NTP — accurate network time</a>
+              <a href="/guides/cloud-aws-azure.html">Cloud: AWS, Azure and GCP — cloud architecture</a>
+              <a href="/guides/infrastructure-monitoring.html">Monitoring — infrastructure health</a>
+              <a href="/guides/log-management.html">Log management — collection and analysis of logs</a>
+              <a href="/guides/backup-and-recovery.html">Backup and recovery — recoverability</a>
+            </div>
+          </div>
+          <a href="/about-us.html">About us</a>
+          <a href="/contact.html">Contact</a>
+        </div>
+        <div class="language-area">
+          <a class="language-switch" href="https://wovtech.sk/clanky/" lang="sk" hreflang="sk" aria-label="Switch to Slovak">
+            <span class="language-code">SK</span>
+            <span class="language-label">Slovak</span>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <section class="hero">
+      <div class="grain" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="card pad-lg">
+          <h1>Articles and recommendations on the design and stabilization of IT infrastructure</h1>
+
+          <p>
+            On this page you will find <b>practical articles and checklists</b>, which help companies find their way around better
+            in topics such as monitoring, logs, backups, access, changes or basic principles of infrastructure design.
+          </p>
+
+          <p>We prepare the content so that it is useful:</p>
+
+          <ul class="list" aria-label="Who are the articles for?" style="margin-top:10px">
+            <li>for management that wants to better understand the state of IT,</li>
+            <li>for companies that are preparing for change or modernization,</li>
+            <li>for internal IT teams who want to verify important areas of operation,</li>
+            <li>for companies that want to better prepare questions before the consultation.</li>
+          </ul>
+
+          <div class="hr"></div>
+
+          <p style="margin-top:12px">
+            Simplified: <b>articles will help you understand the connections, better name the problem and decide what makes sense to solve.</b>
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Basic topics for infrastructure design</h2>
+        <p>Articles that help you understand important areas of IT environment design and operation.</p>
+
+        <div class="grid" role="list">
+          <div class="service" role="listitem">
+            <h3>Monitoring vs. logs</h3>
+            <p>It explains why the two areas are often confused and how they are related in practice.</p>
+            <a class="link" href="/articles/monitoring-vs-logs.html">More information →</a>
+          </div>
+
+          <div class="service" role="listitem">
+            <h3>Backup and recovery</h3>
+            <p>A practical look at why backups need to be part of the design, not an afterthought.</p>
+            <a class="link" href="/articles/backup-and-recovery.html">More information →</a>
+          </div>
+
+          <div class="service" role="listitem">
+            <h3>NTP: why correct time is critical</h3>
+            <p>It shows why accurate time is fundamental to logs, authentication and properly functioning systems.</p>
+            <a class="link" href="/articles/why-accurate-time-is-critical.html">More information →</a>
+          </div>
+
+          <div class="service" role="listitem">
+            <h3>Incidents and changes (Change)</h3>
+            <p>It helps to understand how to manage incidents, changes and operational processes without chaos.</p>
+            <a class="link" href="/articles/incident-and-change-processes.html">More information →</a>
+          </div>
+
+          <div class="service" role="listitem">
+            <h3>Access and identity</h3>
+            <p>It explains why properly configured identity and access are critical to both security and operations.</p>
+            <a class="link" href="/articles/access-and-identity.html">More information →</a>
+          </div>
+
+          <div class="service" role="listitem">
+            <h3>Networking in infrastructure design</h3>
+            <p>It explains how the network affects the overall architecture and why it is important from the beginning of the design.</p>
+            <a class="link" href="/articles/networking-in-infrastructure-design.html">More information →</a>
+          </div>
+
+          <div class="service" role="listitem">
+            <h3>Documentation and runbooks</h3>
+            <p>It shows why well-crafted documentation reduces risk and simplifies operations.</p>
+            <a class="link" href="/articles/documentation-and-runbooks.html">More information →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="card pad">
+          <h2>Looking for an answer to a specific problem?</h2>
+          <p>
+            If you are not sure which article is relevant for you, or you are already dealing with a specific situation in the company,
+            write to us. We will help you find your way faster and suggest the next course of action.
+          </p>
+          <a class="cta" href="/contact.html">Contact WOV Tech</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand">
+          <img class="brand-logo" src="/assets/img/logo-mark.png" alt="WOV Tech logo" width="36" height="36" />
+          <span>
+            WOV Tech
+            <span class="sub">IT done right</span>
+          </span>
+        </div>
+        <small>© 2026 WOV Tech s. r. o.</small>
+        <div style="margin-top:8px; display:flex; gap:10px; flex-wrap:wrap">
+          <a href="/privacy-policy.html">Privacy policy</a>
+          <a href="/terms-and-conditions.html">Terms and conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://wovtech.eu/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Articles",
+        "item": "https://wovtech.eu/articles/"
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Articles | WOV Tech",
+    "url": "https://wovtech.eu/articles/",
+    "description": "Practical articles and recommendations on the design and stabilization of IT infrastructure.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "WOV Tech s. r. o.",
+      "url": "https://wovtech.eu",
+      "logo": "https://wovtech.eu/assets/img/logo-full.png"
+    }
+  }
+  </script>
+</body>
+</html>

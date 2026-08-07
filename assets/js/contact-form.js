@@ -1,6 +1,6 @@
 /**
  * Contact Form Handler
- * Spracovanie kontaktného formulára
+ * English contact form handling
  */
 
 (function() {
@@ -20,19 +20,19 @@
     const errors = [];
 
     if (!data.name || data.name.trim().length < 2) {
-      errors.push('Meno je vyžadované (min. 2 znaky)');
+      errors.push('Name is required (at least 2 characters)');
     }
 
     if (!data.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
-      errors.push('Zadajte platnú e-mailovú adresu');
+      errors.push('Enter a valid email address');
     }
 
     if (!data.company || data.company.trim().length < 2) {
-      errors.push('Názov firmy je vyžadovaný');
+      errors.push('Company name is required');
     }
 
     if (!data.message || data.message.trim().length < 10) {
-      errors.push('Popis situácie musí obsahovať aspoň 10 znakov');
+      errors.push('Your message must contain at least 10 characters');
     }
 
     return errors;
@@ -77,14 +77,14 @@
     }
 
     if (!data.privacy) {
-      showMessage('Musíte súhlasiť s ochranou osobných údajov', 'error');
+      showMessage('You must agree to the privacy policy', 'error');
       return;
     }
 
     // Disable button
     submitBtn.disabled = true;
     const originalText = submitBtn.textContent;
-    submitBtn.textContent = 'Odosielam...';
+    submitBtn.textContent = 'Sending...';
 
     try {
       // Send via Formspree
@@ -100,12 +100,12 @@
           company: data.company,
           service: data.service,
           message: data.message,
-          _subject: `Nový dopyt z WOV Tech - ${data.name}`
+          _subject: `New enquiry from WOV Tech - ${data.name}`
         })
       });
 
       if (response.ok) {
-        showMessage('✓ Ďakujeme! Vaša správa bola úspešne odoslaná. Odpovieme vám čo najskôr.', 'success');
+        showMessage('✓ Thank you! Your message has been sent. We will reply as soon as possible.', 'success');
         form.reset();
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;
@@ -114,7 +114,7 @@
       }
     } catch (error) {
       console.error('Form submission error:', error);
-      showMessage('Chyba pri odosielaní. Prosím, skúste neskôr alebo napíšte priamo na kontakt@wovtech.sk', 'error');
+      showMessage('The message could not be sent. Please try again later or email kontakt@wovtech.sk.', 'error');
       submitBtn.textContent = originalText;
       submitBtn.disabled = false;
     }

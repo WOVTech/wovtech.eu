@@ -1,5 +1,5 @@
-# WOV Tech s. r. o. — pravidlá pre vyhľadávače
+# WOV Tech s. r. o. — search engine rules
 User-agent: *
 Allow: /
 
-Sitemap: https://wovtech.sk/sitemap.xml
+Sitemap: https://wovtech.eu/sitemap.xml

@@ -5,22 +5,23 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
-
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>404 – Page not found | WOV Tech</title>
-  <meta name="description" content="Oops! The page you are looking for does not exist. Return to home page." />
-  <meta name="robots" content="noindex, follow" />
-  <link rel="canonical" href="https://wovtech.eu/404.html" />
-  <link rel="alternate" hreflang="en" href="https://wovtech.eu/404.html" />
-  <link rel="alternate" hreflang="sk" href="https://wovtech.sk/404.html" />
-  <link rel="alternate" hreflang="x-default" href="https://wovtech.eu/404.html" />
+
+  <title>NTP: what to consider | WOV Tech</title>
+  <meta name="description" content="Questions before NTP and time infrastructure design: time sources, hybrid, drift monitoring, change management and incident response." />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="canonical" href="https://wovtech.eu/guides/ntp.html" />
+  <link rel="alternate" hreflang="en" href="https://wovtech.eu/guides/ntp.html" />
+  <link rel="alternate" hreflang="sk" href="https://wovtech.sk/prirucky/ntp.html" />
+  <link rel="alternate" hreflang="x-default" href="https://wovtech.eu/guides/ntp.html" />
 
   <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="404 - Page not found | WOV Tech" />
-  <meta property="og:description" content="Oops! The page you are looking for does not exist. Return to home page." />
+  <meta property="og:title" content="NTP: what to consider | WOV Tech" />
+  <meta property="og:description" content="Questions before NTP and time infrastructure design: time sources, hybrid, drift monitoring, change management and incident response." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://wovtech.eu/404.html" />
+  <meta property="og:url" content="https://wovtech.eu/guides/ntp.html" />
   <meta property="og:locale" content="en_GB" />
   <meta property="og:image" content="https://wovtech.eu/assets/img/logo-full.png" />
   <meta property="og:image:width" content="800" />
@@ -28,14 +29,15 @@
 
   <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="404 – Page not found | WOV Tech" />
-  <meta name="twitter:description" content="Oops! The page you are looking for does not exist. Return to home page." />
+  <meta name="twitter:title" content="NTP: what to consider | WOV Tech" />
+  <meta name="twitter:description" content="Questions before NTP and time infrastructure design: time sources, hybrid, drift monitoring, change management and incident response." />
   <meta name="twitter:image" content="https://wovtech.eu/assets/img/logo-full.png" />
 
   <meta name="theme-color" content="#0b1220" />
   <link rel="preload" href="/assets/img/hero-laptop.webp" as="image" type="image/webp" fetchpriority="high" />
   <link rel="stylesheet" href="/assets/css/styles.css" />
 </head>
+
 <body>
   <script src="/assets/js/dropdown.js" defer></script>
   <a class="skip-link" href="#content">Skip to content</a>
@@ -47,6 +49,7 @@
           <img class="brand-logo" src="/assets/img/logo-mark.png" alt="WOV Tech logo" width="36" height="36" />
           <span>WOV Tech <span class="sub">IT done right</span></span>
         </a>
+
         <div class="menu">
           <a href="/" aria-label="Home">Home</a>
           <div class="dropdown" data-dropdown>
@@ -95,7 +98,7 @@
           <a href="/contact.html">Contact</a>
         </div>
         <div class="language-area">
-          <a class="language-switch" href="https://wovtech.sk/404.html" lang="sk" hreflang="sk" aria-label="Switch to Slovak">
+          <a class="language-switch" href="https://wovtech.sk/prirucky/ntp.html" lang="sk" hreflang="sk" aria-label="Switch to Slovak">
             <span class="language-code">SK</span>
             <span class="language-label">Slovak</span>
           </a>
@@ -105,17 +108,63 @@
   </header>
 
   <main id="content">
+
     <section class="hero">
       <div class="container">
         <div class="card pad-lg">
-          <h1>404 – Page not found</h1>
-          <p>It is possible that the page has been moved or you entered the wrong address.</p>
-          <div style="display:flex; gap:10px; flex-wrap:wrap">
-            <a class="cta" href="/">Back to home page</a>
+                    <nav class="breadcrumbs" aria-label="Detailed navigation">
+            <a href="/">Home</a><span aria-hidden="true">›</span>
+            <a href="/guides/">Guides</a><span aria-hidden="true">›</span>
+            <span aria-current="page">NTP: what to consider before designing</span>
+          </nav>
+
+          <h1>NTP: what to consider before designing</h1>
+          <p>
+            Consistent time is the basis for authentication, certificates, logs, and auditing.
+            With NTP, it is important to address not only server availability, but also <b>synchronization quality</b> and <b>change management</b>.
+          </p>
+
+          <div class="notice" style="margin-top:16px">
+            NTP is <b>tier-0 service</b>. If the time is not right, security, auditing and troubleshooting fail.
+            The minimum standard is more time sources, drift monitoring (not only availability),
+            clear incident ownership and procedure.
           </div>
         </div>
       </div>
     </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="card pad">
+          <h2>Key questions</h2>
+          <ul class="list">
+            <li><b>Time sources:</b> are primary and backup resources (including trust and redundancy) clearly defined?</li>
+            <li><b>Hybrid:</b> how is the synchronization between on-prem and cloud handled (latency, hierarchy, failover)?</li>
+            <li><b>Monitoring:</b> you are watching <b>offset/drift</b> and sync status, not just "server is up"?</li>
+            <li><b>Changes:</b> who can change the NTP configuration, how is the change approved and how is the impact verified?</li>
+            <li><b>Incident:</b> do you have a procedure, who decides and what are the steps in a time drift incident?</li>
+          </ul>
+
+          <div class="hr"></div>
+
+          <h2>Operational impact</h2>
+          <p>
+            Timing issues are often reflected indirectly (TLS certificates, Kerberos/SSO, log correlation, audit trail).
+            Therefore, it makes sense to solve NTP as an operable "tier-0" service: clear ownership, monitoring and runbook.
+          </p>
+
+          <div class="hr"></div>
+
+          <h2>Related</h2>
+          <ul class="list">
+            <li><a href="/services/infrastructure-monitoring.html">Infra monitoring</a></li>
+            <li><a href="/articles/monitoring-vs-logs.html">Monitoring vs logs</a></li>
+            <li><a href="/articles/incident-and-change-processes.html">Incident &amp; Change processes</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="footer">
@@ -128,7 +177,9 @@
             <span class="sub">IT done right</span>
           </span>
         </div>
+
         <small>© 2026 WOV Tech s. r. o.</small>
+
         <div style="margin-top:8px; display:flex; gap:10px; flex-wrap:wrap">
           <a href="/privacy-policy.html">Privacy policy</a>
           <a href="/terms-and-conditions.html">Terms and conditions</a>
@@ -148,6 +199,38 @@
       "SK"
     ],
     "description": "Design and stabilization of IT infrastructure: DDI (DNS/DHCP/IPAM), NTP, cloud (AWS/Azure/GCP), infrastructure monitoring, log management and backup."
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://wovtech.eu/guides/ntp.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://wovtech.eu/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Guides",
+            "item": "https://wovtech.eu/guides/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "NTP: what to consider before designing",
+            "item": "https://wovtech.eu/guides/ntp.html"
+          }
+        ]
+      }
+    ]
   }
   </script>
 </body>

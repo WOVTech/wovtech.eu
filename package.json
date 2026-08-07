@@ -1,4 +1,6 @@
 {
+  "name": "wovtech-eu-site",
+  "private": true,
   "scripts": {
     "img:optimize": "node scripts/optimize-images.js"
   },

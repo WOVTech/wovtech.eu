@@ -9,41 +9,41 @@ process.chdir(projectRoot);
 
 const imgDir = './assets/img';
 
-// Konfigurácia optimalizácie pre každý obrázok
+// Optimisation settings for each image
 const images = {
   'favicon.png': {
-    // Favicon ostane 256x256, iba sa bude komprimovať
+    // Keep the favicon at 256x256 and compress it
     formats: ['png']
   },
   'hero-datacenter.png': {
-    // Hero background - zmenšiť na 1024x768 (16:9 ratio) a WebP
+    // Hero background - resize to 1024x768 and create WebP
     resize: { width: 1024, height: 768, fit: 'cover' },
     formats: ['png', 'webp']
   },
   'hero-laptop.png': {
-    // Hero background - zmenšiť na 1280x800 a WebP
+    // Hero background - resize to 1280x800 and create WebP
     resize: { width: 1280, height: 800, fit: 'cover' },
     formats: ['png', 'webp']
   },
   'logo-full.png': {
-    // Logo - zmenšiť na 800x412
+    // Logo - resize to 800x412
     resize: { width: 800, height: 412, fit: 'contain' },
     formats: ['png']
   },
   'logo-mark.png': {
-    // Logo mark - ponechať ale komprimovať
+    // Keep the logo mark dimensions and compress it
     formats: ['png']
   }
 };
 
 async function optimizeImages() {
-  console.log('🖼️  Začínam optimalizáciu obrázkov...\n');
+  console.log('🖼️  Starting image optimisation...\n');
 
   for (const [filename, config] of Object.entries(images)) {
     const inputPath = path.join(imgDir, filename);
     
     if (!fs.existsSync(inputPath)) {
-      console.log(`⚠️  Súbor nenájdený: ${filename}`);
+      console.log(`⚠️  File not found: ${filename}`);
       continue;
     }
 
@@ -51,7 +51,7 @@ async function optimizeImages() {
     console.log(`📄 ${filename} (${(inputSize / 1024).toFixed(1)} KB)`);
 
     try {
-      // Optimalizovať PNG
+      // Optimise PNG
       if (config.formats.includes('png')) {
         const outputPath = inputPath;
         let processor = sharp(inputPath);
@@ -69,10 +69,10 @@ async function optimizeImages() {
 
         fs.renameSync(outputPath + '.tmp', outputPath);
         const outputSize = fs.statSync(outputPath).size;
-        console.log(`   ✅ PNG: ${(outputSize / 1024).toFixed(1)} KB (${((1 - outputSize / inputSize) * 100).toFixed(0)}% menšie)`);
+        console.log(`   ✅ PNG: ${(outputSize / 1024).toFixed(1)} KB (${((1 - outputSize / inputSize) * 100).toFixed(0)}% smaller)`);
       }
 
-      // Vytvoriť WebP verziu
+      // Create a WebP version
       if (config.formats.includes('webp')) {
         const webpPath = inputPath.replace('.png', '.webp');
         let processor = sharp(inputPath);
@@ -96,14 +96,14 @@ async function optimizeImages() {
     }
   }
 
-  // Vymazať .bak súbory
+  // Remove .bak files
   const bakFile = path.join(imgDir, 'hero-datacenter.png.bak');
   if (fs.existsSync(bakFile)) {
     fs.unlinkSync(bakFile);
-    console.log(`\n🗑️  Vymazaný starý backup: hero-datacenter.png.bak`);
+    console.log(`\n🗑️  Removed old backup: hero-datacenter.png.bak`);
   }
 
-  console.log('\n✨ Optimalizácia hotová!');
+  console.log('\n✨ Image optimisation complete!');
 }
 
 optimizeImages().catch(console.error);

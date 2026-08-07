@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (menu) {
     const currentPath = window.location.pathname.replace(/\/index\.html$/, '/');
-    const sectionPath = ['/sluzby/', '/clanky/', '/prirucky/']
+    const sectionPath = ['/services/', '/articles/', '/guides/']
       .find((path) => currentPath.startsWith(path));
     const activePath = sectionPath || currentPath;
 

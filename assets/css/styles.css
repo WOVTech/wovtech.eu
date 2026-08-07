@@ -16,10 +16,10 @@
   --radius:18px;
   --max:1120px;
 
-  /* hero “enterprise” materiál */
+  /* Enterprise hero surface */
   --heroCard: rgba(210,218,230,.92);
 
-  /* body glass – cieľ: aby presvital detail, nie hmla */
+  /* Body glass: preserve detail without excessive haze */
   --glassBg: rgba(11,18,32,.34);
   --glassBorder: rgba(255,255,255,.14);
   --glassBlur: 10px;
@@ -93,7 +93,7 @@ small{color:var(--muted)}
 
 .header .brand{justify-self:start}
 
-/* BRAND – BASE je pre tmavé pozadie (footer/sekcie) */
+/* Brand base styling for dark backgrounds */
 .brand{
   display:flex;
   align-items:center;
@@ -323,7 +323,7 @@ small{color:var(--muted)}
 
 }
 
-/* CTA – BASE pre tmavé pozadie (sekcie/footer) */
+/* CTA base styling for dark backgrounds */
 .cta{
   display:inline-flex;
   align-items:center;
@@ -469,7 +469,7 @@ main#content::before{
   pointer-events:none;
 }
 
-/* Moderné formáty bez JavaScript detekcie; PNG zostáva ako fallback. */
+/* Modern formats without JavaScript detection; PNG remains the fallback. */
 @supports (background-image: url('data:image/webp;base64,UklGRiYAAABXRUJQVlA4IBIAAAAwAQCdASoBAAEADsD+JaQAA3AA/v3AgAA=')) {
   .hero::before{
     background-image:url("../img/hero-laptop.webp");
@@ -512,7 +512,7 @@ main#content > *{
   -webkit-backdrop-filter: blur(var(--glassBlur));
 }
 
-/* hlavné karty v sekciách */
+/* Main cards within sections */
 .section .card{
   background: var(--glassBg) !important;
   border: 1px solid var(--glassBorder) !important;
@@ -636,7 +636,7 @@ main#content > *{
 .list li{margin: 8px 0}
 
 /* =========================
-   LIST LINKS – články / checklisty
+   LIST LINKS – articles / checklists
 ========================= */
 .list a{
   position: relative;
@@ -751,7 +751,7 @@ main#content > *{
   color:rgba(15,23,42,.86) !important;
 }
 
-/* AKTÍVNA POLOŽKA V MENU */
+/* Active menu item */
 .header .menu > a[aria-current="page"],
 .header .menu > .dropdown > a[aria-current="page"]{
   color: #0f172a !important;
@@ -768,13 +768,13 @@ main#content > *{
   background:rgba(0,136,245,.12);
 }
 
-/* jemná spodná linka */
+/* Subtle underline */
 .header .menu > a[aria-current="page"]::after,
 .header .menu > .dropdown > a[aria-current="page"]::after{
   content:none;
 }
 
-/* ikonka domov – aktívny stav */
+/* Home icon active state */
 .header .menu .home-link[aria-current="page"]{
   background:rgba(0,136,245,.1);
   border-color:transparent;
@@ -900,7 +900,7 @@ main#content a.cta.small{
   font-weight:850;
 }
 
-/* tmavšie linky na svetlom hero pozadí */
+/* Darker links on a light hero background */
 .hero a.cta,
 .hero a.cta.small{
   color:#1d4ed8 !important;
@@ -914,7 +914,7 @@ main#content a.cta.small{
   box-shadow:none !important;
 }
 
-/* svetlejšie linky na tmavom body pozadí */
+/* Lighter links on a dark body background */
 .section a.cta,
 .section a.cta.small{
   color:#9ec5ff !important;
@@ -928,7 +928,7 @@ main#content a.cta.small{
   box-shadow:none !important;
 }
 
-/* šípka s reálnym odsadením */
+/* Arrow with proper spacing */
 main#content a.cta::after,
 main#content a.cta.small::after{
   content:"→";
@@ -936,7 +936,7 @@ main#content a.cta.small::after{
 }
 
 /* =================================================
-   FOOTER – logo pri texte, ale názov centrovaný nad scope
+   FOOTER – logo beside centred brand text
 ================================================= */
 .footer{
   padding: 15px 0 20px;
@@ -958,7 +958,7 @@ main#content a.cta.small::after{
   display:none !important;
 }
 
-/* brand blok centrovaný v footeri, logo vľavo od centrovaného dvojriadku */
+/* Centred footer brand with the logo left of two centred text lines */
 .footer .brand{
   display:grid !important;
   grid-template-columns:36px auto 36px !important;
@@ -972,7 +972,7 @@ main#content a.cta.small::after{
   color: rgba(238,244,255,.96) !important;
 }
 
-/* druhé logo v treťom stĺpci vytvára symetrický brand blok */
+/* A second logo in the third column creates a symmetrical brand block */
 .footer .brand::after{
   content:"";
   display:block;
@@ -992,14 +992,14 @@ main#content a.cta.small::after{
   margin:0 !important;
 }
 
-/* logo je vertikálne vycentrované oproti obom riadkom textu */
+/* Vertically centre the logo against both text lines */
 .footer .brand-logo,
 .footer .brand-badge{
   position: relative;
   top: 0;
 }
 
-/* názov a slogan sú pod sebou a oba vycentrované */
+/* Stack and centre the company name and slogan */
 .footer .brand > span{
   grid-column:2;
   display:flex !important;
@@ -1029,7 +1029,7 @@ main#content a.cta.small::after{
   text-align:center;
 }
 
-/* odkazy centrovať (inline div s margin-top) */
+/* Centre footer links */
 .footer-grid > div > div[style*="margin-top"]{
   display:flex !important;
   justify-content:center !important;
@@ -1157,7 +1157,7 @@ main#content a.cta.small::after{
   }
 }
 
-/* Na menších zariadeniach šetríme GPU pri scrollovaní. */
+/* Reduce GPU work while scrolling on smaller devices. */
 @media (max-width: 700px){
   .header,
   .footer,
