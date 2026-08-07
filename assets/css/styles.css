@@ -802,7 +802,7 @@ main#content a.cta.small::after{
    FOOTER – logo pri texte, ale názov centrovaný nad scope
 ================================================= */
 .footer{
-  padding: 26px 0 40px;
+  padding: 20px 0 30px;
   margin-top: 22px;
   background: rgba(11,18,32,.55);
   backdrop-filter: blur(10px);
@@ -813,24 +813,24 @@ main#content a.cta.small::after{
 
 .footer-grid{
   display:flex;
-  justify-content:center;
-  text-align:center;
+  justify-content:flex-start;
+  text-align:left;
 }
 
 .footer-grid > div:last-child:not(:first-child){
   display:none !important;
 }
 
-/* brand blok vycentrovaný ako celok */
+/* brand blok left-aligned */
 .footer .brand{
   display:flex !important;
   flex-direction:row !important;
   align-items:flex-start !important;
-  justify-content:center !important;
+  justify-content:flex-start !important;
   gap:10px !important;
   width: fit-content !important;
-  margin-left:auto !important;
-  margin-right:auto !important;
+  margin-left:0 !important;
+  margin-right:0 !important;
   color: rgba(238,244,255,.96) !important;
 }
 
@@ -850,12 +850,12 @@ main#content a.cta.small::after{
   top: 4px;
 }
 
-/* text blok: centrovať názov aj sub nad sebou */
+/* text blok: left-align názov aj sub nad sebou */
 .footer .brand > span{
   display:flex !important;
   flex-direction:column !important;
-  align-items:center !important;
-  text-align:center !important;
+  align-items:flex-start !important;
+  text-align:left !important;
   gap:2px !important;
   color: rgba(238,244,255,.96) !important;
   transform: translateY(-2px);
@@ -872,12 +872,13 @@ main#content a.cta.small::after{
   display:block;
   margin-top:8px;
   color: rgba(238,244,255,.88);
+  text-align:left;
 }
 
-/* odkazy vycentrovať (inline div s margin-top) */
+/* odkazy left-align (inline div s margin-top) */
 .footer-grid > div > div[style*="margin-top"]{
   display:flex !important;
-  justify-content:center !important;
+  justify-content:flex-start !important;
   gap:16px !important;
   width:100% !important;
 }
