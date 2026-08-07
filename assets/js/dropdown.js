@@ -9,14 +9,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const close = () => dropdown.classList.remove('is-open');
     const open = () => dropdown.classList.add('is-open');
-    const toggle = () => {
-      dropdown.classList.contains('is-open') ? close() : open();
+    const toggle = (force) => {
+      const shouldOpen = typeof force === 'boolean' ? force : !dropdown.classList.contains('is-open');
+      dropdown.classList.toggle('is-open', shouldOpen);
     };
 
     trigger.addEventListener('click', (event) => {
       event.preventDefault();
       event.stopPropagation();
       toggle();
+    });
+
+    menu.addEventListener('click', (event) => {
+      if (event.target.closest('a')) {
+        close();
+      }
     });
 
     document.addEventListener('click', (event) => {
