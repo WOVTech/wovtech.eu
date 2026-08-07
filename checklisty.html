@@ -48,7 +48,19 @@
               <a href="/navrh-infrastruktury/dokumentacia-a-runbooky.html">Dokumentácia a runbooky</a>
             </div>
           </div>
-          <a href="/checklisty.html" aria-current="page">Príručky</a>
+          <div class="dropdown" data-dropdown>
+            <a href="/checklisty.html" class="drop-trigger" data-dropdown-trigger>Príručky ▾</a>
+            <div class="submenu" role="menu" data-dropdown-menu>
+              <span class="submenu-title">Príručky a kontrolné zoznamy</span>
+              <a href="/checklisty.html">Všetky príručky</a>
+              <a href="/checklisty/ddi-dns-dhcp-ipam.html">DDI / DNS / DHCP / IPAM — sieťové služby</a>
+              <a href="/checklisty/ntp.html">NTP — presný čas v sieti</a>
+              <a href="/checklisty/cloud-aws-azure.html">Cloud AWS / Azure — cloudová architektúra</a>
+              <a href="/checklisty/monitoring-infrastruktury.html">Monitoring — zdravie infraštruktúry</a>
+              <a href="/checklisty/log-management.html">Log management — zber a analýza logov</a>
+              <a href="/checklisty/zalohy-a-obnova.html">Zálohovanie a obnova — obnoviteľnosť</a>
+            </div>
+          </div>
           <a href="/o-nas.html">O nás</a>
           <a href="/kontakt.html">Kontakt</a>
         </div>
@@ -56,15 +68,25 @@
     </div>
   </header>
   <main id="content" class="container" style="padding: 48px 0 80px;">
-    <h1>Príručky</h1>
-    <p>Tu nájdete praktické príručky pre kľúčové oblasti IT infraštruktúry.</p>
+    <h1>Príručky a kontrolné zoznamy</h1>
+    <p>Tu nájdete praktické príručky, ktoré pomáhajú overiť, čo je potrebné pripraviť alebo skontrolovať v IT infraštruktúre.</p>
+    <p>Každá príručka je zameraná na konkrétnu oblasť a dá sa použiť pri návrhu, audite alebo zlepšovaní existujúcej infraštruktúry.</p>
+
+    <h2>Na čo sú tieto príručky?</h2>
     <ul>
-      <li><a href="/checklisty/cloud-aws-azure.html">Cloud (AWS / Azure)</a></li>
-      <li><a href="/checklisty/monitoring-infrastruktury.html">Monitoring infraštruktúry</a></li>
-      <li><a href="/checklisty/log-management.html">Log management</a></li>
-      <li><a href="/checklisty/zalohy-a-obnova.html">Zálohovanie a obnova</a></li>
-      <li><a href="/checklisty/ddi-dns-dhcp-ipam.html">DDI / DNS / DHCP / IPAM</a></li>
-      <li><a href="/checklisty/ntp.html">NTP</a></li>
+      <li>pomáhajú zistiť, čo je potrebné nastaviť</li>
+      <li>slúžia ako kontrolný zoznam pri návrhu alebo revízii</li>
+      <li>môžu byť užitočné pred nasadením nových služieb alebo pri audite</li>
+    </ul>
+
+    <h2>Všetky príručky</h2>
+    <ul>
+      <li><a href="/checklisty/cloud-aws-azure.html">Cloud (AWS / Azure) — kontrola cloudového prostredia</a></li>
+      <li><a href="/checklisty/monitoring-infrastruktury.html">Monitoring infraštruktúry — čo sledujeme a prečo</a></li>
+      <li><a href="/checklisty/log-management.html">Log management — zber a analýza logov</a></li>
+      <li><a href="/checklisty/zalohy-a-obnova.html">Zálohovanie a obnova — obnoviteľnosť systémov</a></li>
+      <li><a href="/checklisty/ddi-dns-dhcp-ipam.html">DDI / DNS / DHCP / IPAM — sieťové a adresárske služby</a></li>
+      <li><a href="/checklisty/ntp.html">NTP — presný čas v sieti</a></li>
     </ul>
   </main>
 </body>
