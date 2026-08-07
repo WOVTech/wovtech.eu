@@ -10,8 +10,8 @@ console.log('🏷️ Pridávam keywords meta tagy na všetky HTML súbory...\n')
 
 // Default keywords pre rôzne typy strán
 const defaultKeywords = {
-  'sluzby/': 'IT služby, cloud, monitoring, zálohovanie, DNS DHCP, DDI IPAM, NTP, log management',
-  'navrh-infrastruktury/': 'návrh infraštruktúry, IT architektúra, incident management, change management',
+  'sluzby/': 'IT služby, cloud, monitoring, zálohovanie, DNS DHCP, DDI IPAM, NTP, log manažment',
+  'navrh-infrastruktury/': 'návrh infraštruktúry, IT architektúra, incident manažment, change manažment',
   'checklisty/': 'IT checklist, best practices, konfiguracia, konfigurácia infraštruktúry',
   'default': 'IT infraštruktúra, cloud, monitoring, IT konzultácia, IT služby'
 };

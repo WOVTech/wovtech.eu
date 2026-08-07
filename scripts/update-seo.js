@@ -17,8 +17,8 @@ const pagesConfig = {
   },
   'sluzby.html': {
     title: 'Služby | WOV Tech',
-    description: 'Pomáhame malým, stredným a veľkým firmám s návrhom a stabilizáciou IT infraštruktúry. Cloud AWS/Azure/GCP, DNS, DHCP, NTP, monitoring, log management, zálohovanie a obnova.',
-    keywords: 'IT služby, návrh infraštruktúry, cloud, monitoring, zálohy, DNS DHCP, log management'
+    description: 'Pomáhame malým, stredným a veľkým firmám s návrhom a stabilizáciou IT infraštruktúry. Cloud AWS/Azure/GCP, DNS, DHCP, NTP, monitoring, log manažment, zálohovanie a obnova.',
+    keywords: 'IT služby, návrh infraštruktúry, cloud, monitoring, zálohy, DNS DHCP, log manažment'
   },
   'kontakt.html': {
     title: 'Kontakt | WOV Tech',

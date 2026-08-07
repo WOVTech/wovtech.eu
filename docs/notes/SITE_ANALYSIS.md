@@ -27,7 +27,7 @@
 | `/sluzby/monitoring-infrastruktury.html` | Monitoring | H1 + 2 odstavce + 2 boxy | ~100 slov |
 | `/sluzby/ntp.html` | NTP | H1 + 2 odstavce + 2 boxy | ~100 slov |
 | `/sluzby/zalohy-a-obnova.html` | Zálohy | H1 + 2 odstavce + 2 boxy | ~100 slov |
-| `/sluzby/log-management.html` | Log management | H1 + 2 odstavce + 2 boxy | ~100 slov |
+| `/sluzby/log-manazment.html` | Log manažment | H1 + 2 odstavce + 2 boxy | ~100 slov |
 
 ### Články - Návrh infraštruktúry (7)
 | Cesta | Názov | Obsah | Dlžka |
@@ -45,7 +45,7 @@
 |------|-------|-------------------|-------|
 | `/checklisty/cloud-aws-azure.html` | Cloud checklist | (nie je prečítaný) | neznáma |
 | `/checklisty/ddi-dns-dhcp-ipam.html` | DDI checklist | (nie je prečítaný) | neznáma |
-| `/checklisty/log-management.html` | Log mgmt checklist | (nie je prečítaný) | neznáma |
+| `/checklisty/log-manazment.html` | Log mgmt checklist | (nie je prečítaný) | neznáma |
 | `/checklisty/monitoring-infrastruktury.html` | Monitoring checklist | (nie je prečítaný) | neznáma |
 | `/checklisty/ntp.html` | NTP checklist | (nie je prečítaný) | neznáma |
 | `/checklisty/zalohy-a-obnova.html` | Backup checklist | (nie je prečítaný) | neznáma |
@@ -67,7 +67,7 @@ wovtech.sk/
 │   ├── DDI → /sluzby/ddi-dns-dhcp-ipam.html
 │   ├── NTP → /sluzby/ntp.html
 │   ├── Monitoring → /sluzby/monitoring-infrastruktury.html
-│   ├── Log mgmt → /sluzby/log-management.html
+│   ├── Log mgmt → /sluzby/log-manazment.html
 │   └── Zálohy → /sluzby/zalohy-a-obnova.html
 │
 ├── /navrh-infrastruktury.html (Hub)
@@ -88,7 +88,7 @@ wovtech.sk/
 │       ├── /checklisty/ntp.html
 │       ├── /checklisty/cloud-aws-azure.html
 │       ├── /checklisty/monitoring-infrastruktury.html
-│       ├── /checklisty/log-management.html
+│       ├── /checklisty/log-manazment.html
 │       └── /checklisty/zalohy-a-obnova.html
 │
 └── /kontakt.html
@@ -113,7 +113,7 @@ Pre každú tému existujú **až 3 strany** s podobným/rovnakým obsahom:
 | **Monitoring** | `/sluzby/monitoring-infrastruktury.html` | (bez dlhého článku, ale link na monitoring-vs-logy) | `/checklisty/monitoring-infrastruktury.html` | - |
 | **DDI** | `/sluzby/ddi-dns-dhcp-ipam.html` | (bez dlhého článku, link na networking) | `/checklisty/ddi-dns-dhcp-ipam.html` | - |
 | **Cloud** | `/sluzby/cloud-aws-azure.html` | (bez dlhého článku) | `/checklisty/cloud-aws-azure.html` | - |
-| **Log mgmt** | `/sluzby/log-management.html` | (bez dlhého článku, link na monitoring-vs-logy) | `/checklisty/log-management.html` | - |
+| **Log mgmt** | `/sluzby/log-manazment.html` | (bez dlhého článku, link na monitoring-vs-logy) | `/checklisty/log-manazment.html` | - |
 
 **Problém:** Google vidí **silný duplicate content signal** - rovnaké témy na viacerých URL-och s podobným obsahom.
 
@@ -121,7 +121,7 @@ Pre každú tému existujú **až 3 strany** s podobným/rovnakým obsahom:
 
 - **Meta descriptions:** Všetky `/sluzby/` stránky majú rovnaké keywords:
   ```
-  "IT služby, cloud, monitoring, zálohovanie, DNS DHCP, DDI IPAM, NTP, log management"
+  "IT služby, cloud, monitoring, zálohovanie, DNS DHCP, DDI IPAM, NTP, log manažment"
   ```
   → Žiadna diferenciácia, slabá SEO
 
