@@ -32,23 +32,23 @@
 ### Články - Návrh infraštruktúry (7)
 | Cesta | Názov | Obsah | Dlžka |
 |------|-------|-------|-------|
-| `/navrh-infrastruktury/monitoring-vs-logy.html` | Monitoring vs logy | Vysvetlenie rozdielu + notice block + kľúčové otázky | ~250 slov |
-| `/navrh-infrastruktury/zalohy-a-obnova.html` | Zálohy & obnova | RPO/RTO, typické riziká + notice block | ~350 slov |
-| `/navrh-infrastruktury/ntp-preco-je-cas-kriticky.html` | Prečo NTP | Dôvody kritičnosti + otázky + riziká | ~300 slov |
-| `/navrh-infrastruktury/incident-a-change-procesy.html` | Incident & Change | Procesné aspekty, runbooky, eskalácie | ~350 slov |
-| `/navrh-infrastruktury/pristupy-a-identita.html` | IAM | Identita, oprávnenia, least privilege | ~400 slov |
-| `/navrh-infrastruktury/networking-v-infra-navrhu.html` | Networking | Segmentácia, firewall, routing | ~300 slov |
-| `/navrh-infrastruktury/dokumentacia-a-runbooky.html` | Dokumentácia | Importance, runbooky, ownership | ~300 slov |
+| `/clanky/monitoring-vs-logy.html` | Monitoring vs logy | Vysvetlenie rozdielu + notice block + kľúčové otázky | ~250 slov |
+| `/clanky/zalohy-a-obnova.html` | Zálohy & obnova | RPO/RTO, typické riziká + notice block | ~350 slov |
+| `/clanky/ntp-preco-je-cas-kriticky.html` | Prečo NTP | Dôvody kritičnosti + otázky + riziká | ~300 slov |
+| `/clanky/incident-a-change-procesy.html` | Incident & Change | Procesné aspekty, runbooky, eskalácie | ~350 slov |
+| `/clanky/pristupy-a-identita.html` | IAM | Identita, oprávnenia, least privilege | ~400 slov |
+| `/clanky/networking-v-infra-navrhu.html` | Networking | Segmentácia, firewall, routing | ~300 slov |
+| `/clanky/dokumentacia-a-runbooky.html` | Dokumentácia | Importance, runbooky, ownership | ~300 slov |
 
 ### Checklisty (6)
 | Cesta | Názov | Predpokladaný obsah | Dĺžka |
 |------|-------|-------------------|-------|
-| `/checklisty/cloud-aws-azure.html` | Cloud checklist | (nie je prečítaný) | neznáma |
-| `/checklisty/ddi-dns-dhcp-ipam.html` | DDI checklist | (nie je prečítaný) | neznáma |
-| `/checklisty/log-manazment.html` | Log mgmt checklist | (nie je prečítaný) | neznáma |
-| `/checklisty/monitoring-infrastruktury.html` | Monitoring checklist | (nie je prečítaný) | neznáma |
-| `/checklisty/ntp.html` | NTP checklist | (nie je prečítaný) | neznáma |
-| `/checklisty/zalohy-a-obnova.html` | Backup checklist | (nie je prečítaný) | neznáma |
+| `/prirucky/cloud-aws-azure.html` | Cloud checklist | (nie je prečítaný) | neznáma |
+| `/prirucky/ddi-dns-dhcp-ipam.html` | DDI checklist | (nie je prečítaný) | neznáma |
+| `/prirucky/log-manazment.html` | Log mgmt checklist | (nie je prečítaný) | neznáma |
+| `/prirucky/monitoring-infrastruktury.html` | Monitoring checklist | (nie je prečítaný) | neznáma |
+| `/prirucky/ntp.html` | NTP checklist | (nie je prečítaný) | neznáma |
+| `/prirucky/zalohy-a-obnova.html` | Backup checklist | (nie je prečítaný) | neznáma |
 
 ---
 
@@ -62,7 +62,7 @@ wovtech.sk/
 │   ├── "Články" → clanky.html
 │   └── "Kontakt" → kontakt.html
 │
-├── /sluzby.html (Hub)
+├── /sluzby/ (Hub)
 │   ├── Cloud ops → /sluzby/cloud-aws-azure.html
 │   ├── DDI → /sluzby/ddi-dns-dhcp-ipam.html
 │   ├── NTP → /sluzby/ntp.html
@@ -70,26 +70,26 @@ wovtech.sk/
 │   ├── Log mgmt → /sluzby/log-manazment.html
 │   └── Zálohy → /sluzby/zalohy-a-obnova.html
 │
-├── /navrh-infrastruktury.html (Hub)
+├── /sluzby/navrh-infrastruktury.html (Hub)
 │   └── (Detailní články v clanky.html s linkami)
 │
 ├── /clanky.html (Hub + linky)
 │   ├── Články (7 stránok)
-│   │   ├── /navrh-infrastruktury/monitoring-vs-logy.html
-│   │   ├── /navrh-infrastruktury/zalohy-a-obnova.html
-│   │   ├── /navrh-infrastruktury/ntp-preco-je-cas-kriticky.html
-│   │   ├── /navrh-infrastruktury/incident-a-change-procesy.html
-│   │   ├── /navrh-infrastruktury/pristupy-a-identita.html
-│   │   ├── /navrh-infrastruktury/networking-v-infra-navrhu.html
-│   │   └── /navrh-infrastruktury/dokumentacia-a-runbooky.html
+│   │   ├── /clanky/monitoring-vs-logy.html
+│   │   ├── /clanky/zalohy-a-obnova.html
+│   │   ├── /clanky/ntp-preco-je-cas-kriticky.html
+│   │   ├── /clanky/incident-a-change-procesy.html
+│   │   ├── /clanky/pristupy-a-identita.html
+│   │   ├── /clanky/networking-v-infra-navrhu.html
+│   │   └── /clanky/dokumentacia-a-runbooky.html
 │   │
 │   └── Checklisty (6 stránok)
-│       ├── /checklisty/ddi-dns-dhcp-ipam.html
-│       ├── /checklisty/ntp.html
-│       ├── /checklisty/cloud-aws-azure.html
-│       ├── /checklisty/monitoring-infrastruktury.html
-│       ├── /checklisty/log-manazment.html
-│       └── /checklisty/zalohy-a-obnova.html
+│       ├── /prirucky/ddi-dns-dhcp-ipam.html
+│       ├── /prirucky/ntp.html
+│       ├── /prirucky/cloud-aws-azure.html
+│       ├── /prirucky/monitoring-infrastruktury.html
+│       ├── /prirucky/log-manazment.html
+│       └── /prirucky/zalohy-a-obnova.html
 │
 └── /kontakt.html
 ```
@@ -106,14 +106,14 @@ wovtech.sk/
 
 Pre každú tému existujú **až 3 strany** s podobným/rovnakým obsahom:
 
-| Téma | `/sluzby/` | `/navrh-infrastruktury/` | `/checklisty/` | FREE/LEAD |
+| Téma | `/sluzby/` | `/clanky/` | `/prirucky/` | FREE/LEAD |
 |------|----------|------------------------|----------------|-----------|
-| **NTP** | `/sluzby/ntp.html` (krátka) | `/navrh-infrastruktury/ntp-preco-je-cas-kriticky.html` (long) | `/checklisty/ntp.html` | + lead gen? |
-| **Zálohy** | `/sluzby/zalohy-a-obnova.html` | `/navrh-infrastruktury/zalohy-a-obnova.html` | `/checklisty/zalohy-a-obnova.html` | + lead gen?|
-| **Monitoring** | `/sluzby/monitoring-infrastruktury.html` | (bez dlhého článku, ale link na monitoring-vs-logy) | `/checklisty/monitoring-infrastruktury.html` | - |
-| **DDI** | `/sluzby/ddi-dns-dhcp-ipam.html` | (bez dlhého článku, link na networking) | `/checklisty/ddi-dns-dhcp-ipam.html` | - |
-| **Cloud** | `/sluzby/cloud-aws-azure.html` | (bez dlhého článku) | `/checklisty/cloud-aws-azure.html` | - |
-| **Log mgmt** | `/sluzby/log-manazment.html` | (bez dlhého článku, link na monitoring-vs-logy) | `/checklisty/log-manazment.html` | - |
+| **NTP** | `/sluzby/ntp.html` (krátka) | `/clanky/ntp-preco-je-cas-kriticky.html` (long) | `/prirucky/ntp.html` | + lead gen? |
+| **Zálohy** | `/sluzby/zalohy-a-obnova.html` | `/clanky/zalohy-a-obnova.html` | `/prirucky/zalohy-a-obnova.html` | + lead gen?|
+| **Monitoring** | `/sluzby/monitoring-infrastruktury.html` | (bez dlhého článku, ale link na monitoring-vs-logy) | `/prirucky/monitoring-infrastruktury.html` | - |
+| **DDI** | `/sluzby/ddi-dns-dhcp-ipam.html` | (bez dlhého článku, link na networking) | `/prirucky/ddi-dns-dhcp-ipam.html` | - |
+| **Cloud** | `/sluzby/cloud-aws-azure.html` | (bez dlhého článku) | `/prirucky/cloud-aws-azure.html` | - |
+| **Log mgmt** | `/sluzby/log-manazment.html` | (bez dlhého článku, link na monitoring-vs-logy) | `/prirucky/log-manazment.html` | - |
 
 **Problém:** Google vidí **silný duplicate content signal** - rovnaké témy na viacerých URL-och s podobným obsahom.
 
@@ -131,7 +131,7 @@ Pre každú tému existujú **až 3 strany** s podobným/rovnakým obsahom:
   <p>[Krátsy popis]</p>
   ```
 
-- **"Čo typicky riešime":** Opakovací obsah v `/sluzby/` a potom dlhšia verzia v `/navrh-infrastruktury/`
+- **"Čo typicky riešime":** Opakovací obsah v `/sluzby/` a potom dlhšia verzia v `/clanky/`
 
 ---
 
@@ -144,7 +144,7 @@ Pre každú tému existujú **až 3 strany** s podobným/rovnakým obsahom:
 | **N1** | Checklisty sú skryté v druhu rade clanky.html | Ľudia ich ľahko prehliadnu | STREDNÁ |
 | **N2** | Nepôsobí ako "lead magnet" - sú skryté na webe | Nižšia konverzia | VYSOKÁ |
 | **N3** | Bez "breadcrumb" na podstránkach | Ťažšia orientácia | NÍZKA |
-| **N4** | Link na /sluzby/ z /navrh-infrastruktury/ chýba | Nelogické prepojenie | NÍZKA |
+| **N4** | Link na /sluzby/ z /clanky/ chýba | Nelogické prepojenie | NÍZKA |
 
 ### B) SEO & DUPLICITNÝ OBSAH
 
@@ -161,9 +161,9 @@ Pre každú tému existujú **až 3 strany** s podobným/rovnakým obsahom:
 | # | Problém | Dopad | Závažnosť |
 |---|---------|-------|-----------|
 | **O1** | `/sluzby/*.html` sú veľmi krátke (~100 slov) | Vyzerajú "nedokončené" | STREDNÁ |
-| **O2** | Bez "intro text" na `/checklisty/*` | Nevieme sa orientovať | NÍZKA |
+| **O2** | Bez "intro text" na `/prirucky/*` | Nevieme sa orientovať | NÍZKA |
 | **O3** | Bez praktických príkladov/case studies | Abstraktne, ťažko pochopiť dopad | STREDNÁ |
-| **O4** | Spodok všetkých `/navrh-infrastruktury/*` nemá CTA | Nižšia konverzia | STREDNÁ |
+| **O4** | Spodok všetkých `/clanky/*` nemá CTA | Nižšia konverzia | STREDNÁ |
 
 ### D) ŠTRUKTURÁLNE NEKONZISTENTNOSTI
 
@@ -178,7 +178,7 @@ Pre každú tému existujú **až 3 strany** s podobným/rovnakým obsahom:
 
 | # | Problém | Dopad | Závažnosť |
 |---|---------|-------|-----------|
-| **C1** | `/navrh-infrastruktury/*` nemajú CTA v hlade | Ľudia sa nemajú ako pozvať ku kontaktu | VYSOKÁ |
+| **C1** | `/clanky/*` nemajú CTA v hlade | Ľudia sa nemajú ako pozvať ku kontaktu | VYSOKÁ |
 | **C2** | CTA tlačítka sú čítané, ale nie zrejmé | Nižšia konverzia | STREDNÁ |
 | **C3** | Kontakt je iba v menu, nie na spodku | Ľudia si klikať musia | NÍZKA |
 
@@ -218,7 +218,7 @@ Pre každú tému existujú **až 3 strany** s podobným/rovnakým obsahom:
 
 ---
 
-#### **2. [VYSOKÝ PRIORIT] Pridať CTA na dne všetkých `/navrh-infrastruktury/*` stránok**
+#### **2. [VYSOKÝ PRIORIT] Pridať CTA na dne všetkých `/clanky/*` stránok**
 **Problém:** Články nebávajú call-to-action, ľudia si nemajú ako zavolať  
 **Riešenie:** Pridať pred footer blok:
 ```html
@@ -241,7 +241,7 @@ Pre každú tému existujú **až 3 strany** s podobným/rovnakým obsahom:
 **Problém:** Checklisty sú skryté, nevyzerajú ako hodnota  
 **Riešenie:**
 - Vydať checklisty ako **downloadovateľný PDF** z `/clanky.html`
-- Pridať **"Get checklist"** CTA na každé stránke v `/sluzby/` a `/navrh-infrastruktury/`
+- Pridať **"Get checklist"** CTA na každé stránke v `/sluzby/` a `/clanky/`
 - URL pattern: `/downloads/checklist-ntp.pdf` alebo email capture form
 
 Príklad na `/sluzby/ntp.html`:
@@ -301,8 +301,8 @@ Príklad na `/sluzby/ntp.html`:
   <h3>Súvisiace témy</h3>
   <div class="grid">
     <a href="/sluzby/ntp.html">NTP služba</a>
-    <a href="/navrh-infrastruktury/ntp-preco-je-cas-kriticky.html">Prečo NTP kritické</a>
-    <a href="/checklisty/ntp.html">NTP checklist</a>
+    <a href="/clanky/ntp-preco-je-cas-kriticky.html">Prečo NTP kritické</a>
+    <a href="/prirucky/ntp.html">NTP checklist</a>
   </div>
 </div>
 ```
@@ -327,7 +327,7 @@ Príklad na `/sluzby/ntp.html`:
 
 ### Fáza 1: SEO & Konverzia (Týždeň 1)
 - [ ] Zmeniť meta tags a keywords na všetkých `/sluzby/*.html` (30 min)
-- [ ] Pridať CTA blok na všetkých `/navrh-infrastruktury/*` (20 min)
+- [ ] Pridať CTA blok na všetkých `/clanky/*` (20 min)
 - [ ] Rozšíriť obsah v `/sluzby/ntp.html` a `/sluzby/zalohy-a-obnova.html` (1h)
 
 ### Fáza 2: UX & Navigation (Týždeň 2)
@@ -346,7 +346,7 @@ Príklad na `/sluzby/ntp.html`:
 
 - **Celk. stránok:** 26
 - **Duplikácií obsahu:** 3 vrstvy × 6 tém = vysoký duplicate risk
-- **Strany bez CTA:** 7 (`/navrh-infrastruktury/*`)
+- **Strany bez CTA:** 7 (`/clanky/*`)
 - **Strany bez unique meta:** 6 (`/sluzby/*`)
 - **Chýbajúce breadcrumbs:** Všetky podstránky
 - **Návrh obsahu k rozšíreniu:** 13 stránok (~50 kb textu)

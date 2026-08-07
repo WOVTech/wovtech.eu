@@ -6,26 +6,26 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>NTP: čo si premyslieť | WOV Tech</title>
-  <meta name="description" content="Otázky pred návrhom NTP a časovej infraštruktúry: zdroje času, hybrid, monitoring driftu, správa zmien a postup pri incidente." />
+  <title>Zálohy: čo si premyslieť | WOV Tech</title>
+  <meta name="description" content="Otázky pred návrhom zálohovania a obnovy: RPO/RTO, testy obnovy, prístupy, konfigurácie, odolnosť voči ransomvéru a plán veľkého incidentu." />
   <meta name="keywords" content="IT checklist, best practices, konfigurácia, konfigurácia infraštruktúry" />
   <meta name="robots" content="index,follow,noarchive" />
 
-  <link rel="canonical" href="https://test.wovtech.sk/checklisty/ntp.html" />
+  <link rel="canonical" href="https://test.wovtech.sk/prirucky/zalohy-a-obnova.html" />
 
   <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="NTP: čo si premyslieť | WOV Tech" />
-  <meta property="og:description" content="Otázky pred návrhom NTP a časovej infraštruktúry: zdroje času, hybrid, monitoring driftu, správa zmien a postup pri incidente." />
+  <meta property="og:title" content="Zálohy: čo si premyslieť | WOV Tech" />
+  <meta property="og:description" content="Otázky pred návrhom zálohovania a obnovy: RPO/RTO, testy obnovy, prístupy, konfigurácie, odolnosť voči ransomvéru a plán veľkého incidentu." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://test.wovtech.sk/checklisty/ntp.html" />
+  <meta property="og:url" content="https://test.wovtech.sk/prirucky/zalohy-a-obnova.html" />
   <meta property="og:image" content="https://test.wovtech.sk/assets/img/logo-full.png" />
   <meta property="og:image:width" content="800" />
   <meta property="og:image:height" content="412" />
 
   <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="NTP: čo si premyslieť | WOV Tech" />
-  <meta name="twitter:description" content="Otázky pred návrhom NTP a časovej infraštruktúry: zdroje času, hybrid, monitoring driftu, správa zmien a postup pri incidente." />
+  <meta name="twitter:title" content="Zálohy: čo si premyslieť | WOV Tech" />
+  <meta name="twitter:description" content="Otázky pred návrhom zálohovania a obnovy: RPO/RTO, testy obnovy, prístupy, konfigurácie, odolnosť voči ransomvéru a plán veľkého incidentu." />
   <meta name="twitter:image" content="https://test.wovtech.sk/assets/img/logo-full.png" />
 
   <meta name="theme-color" content="#0b1220" />
@@ -49,11 +49,11 @@
         <div class="menu">
           <a href="/" aria-label="Domov">Domov</a>
           <div class="dropdown" data-dropdown>
-            <a href="/sluzby.html" class="drop-trigger" data-dropdown-trigger>Služby ▾</a>
+            <a href="/sluzby/" class="drop-trigger" data-dropdown-trigger>Služby ▾</a>
             <div class="submenu" role="menu" data-dropdown-menu>
               <span class="submenu-title">Jednotlivé služby</span>
-              <a href="/sluzby.html">Všetky služby</a>
-              <a href="/navrh-infrastruktury.html">Návrh IT infraštruktúry</a>
+              <a href="/sluzby/">Všetky služby</a>
+              <a href="/sluzby/navrh-infrastruktury.html">Návrh IT infraštruktúry</a>
               <a href="/sluzby/cloud-aws-azure.html">Cloud AWS / Azure</a>
               <a href="/sluzby/monitoring-infrastruktury.html">Monitoring infraštruktúry</a>
               <a href="/sluzby/log-manazment.html">Log manažment</a>
@@ -67,26 +67,26 @@
             <div class="submenu" role="menu" data-dropdown-menu>
               <span class="submenu-title">Články</span>
               <a href="/clanky.html">Všetky články</a>
-              <a href="/navrh-infrastruktury/monitoring-vs-logy.html">Monitoring vs. logy</a>
-              <a href="/navrh-infrastruktury/zalohy-a-obnova.html">Zálohovanie a obnova</a>
-              <a href="/navrh-infrastruktury/ntp-preco-je-cas-kriticky.html">NTP: prečo je správny čas kritický</a>
-              <a href="/navrh-infrastruktury/incident-a-change-procesy.html">Incidenty a zmeny</a>
-              <a href="/navrh-infrastruktury/pristupy-a-identita.html">Prístupy a identita</a>
-              <a href="/navrh-infrastruktury/networking-v-infra-navrhu.html">Sieť v návrhu infraštruktúry</a>
-              <a href="/navrh-infrastruktury/dokumentacia-a-runbooky.html">Dokumentácia a runbooky</a>
+              <a href="/clanky/monitoring-vs-logy.html">Monitoring vs. logy</a>
+              <a href="/clanky/zalohy-a-obnova.html">Zálohovanie a obnova</a>
+              <a href="/clanky/ntp-preco-je-cas-kriticky.html">NTP: prečo je správny čas kritický</a>
+              <a href="/clanky/incident-a-change-procesy.html">Incidenty a zmeny</a>
+              <a href="/clanky/pristupy-a-identita.html">Prístupy a identita</a>
+              <a href="/clanky/networking-v-infra-navrhu.html">Sieť v návrhu infraštruktúry</a>
+              <a href="/clanky/dokumentacia-a-runbooky.html">Dokumentácia a runbooky</a>
             </div>
           </div>
           <div class="dropdown" data-dropdown>
-            <a href="/checklisty.html" class="drop-trigger" data-dropdown-trigger>Príručky ▾</a>
+            <a href="/prirucky.html" class="drop-trigger" data-dropdown-trigger>Príručky ▾</a>
             <div class="submenu" role="menu" data-dropdown-menu>
               <span class="submenu-title">Príručky a kontrolné zoznamy</span>
-              <a href="/checklisty.html">Všetky príručky</a>
-              <a href="/checklisty/ddi-dns-dhcp-ipam.html">DDI / DNS / DHCP / IPAM — sieťové služby</a>
-              <a href="/checklisty/ntp.html">NTP — presný čas v sieti</a>
-              <a href="/checklisty/cloud-aws-azure.html">Cloud AWS / Azure — cloudová architektúra</a>
-              <a href="/checklisty/monitoring-infrastruktury.html">Monitoring — zdravie infraštruktúry</a>
-              <a href="/checklisty/log-manazment.html">Log manažment — zber a analýza logov</a>
-              <a href="/checklisty/zalohy-a-obnova.html">Zálohovanie a obnova — obnoviteľnosť</a>
+              <a href="/prirucky.html">Všetky príručky</a>
+              <a href="/prirucky/ddi-dns-dhcp-ipam.html">DDI / DNS / DHCP / IPAM — sieťové služby</a>
+              <a href="/prirucky/ntp.html">NTP — presný čas v sieti</a>
+              <a href="/prirucky/cloud-aws-azure.html">Cloud AWS / Azure — cloudová architektúra</a>
+              <a href="/prirucky/monitoring-infrastruktury.html">Monitoring — zdravie infraštruktúry</a>
+              <a href="/prirucky/log-manazment.html">Log manažment — zber a analýza logov</a>
+              <a href="/prirucky/zalohy-a-obnova.html">Zálohovanie a obnova — obnoviteľnosť</a>
             </div>
           </div>
           <a href="/o-nas.html">O nás</a>
@@ -101,16 +101,16 @@
     <section class="hero">
       <div class="container">
         <div class="card pad-lg">
-          <h1>NTP: čo si premyslieť pred návrhom</h1>
+          <h1>Zálohy &amp; obnova: čo si premyslieť pred návrhom</h1>
           <p>
-            Konzistentný čas je základ pre autentifikáciu, certifikáty, logy a audit.
-            Pri NTP je dôležité riešiť nielen dostupnosť servera, ale aj <b>kvalitu synchronizácie</b> a <b>riadenie zmien</b>.
+            Zálohovanie nie je cieľ — cieľom je <b>predvídateľná obnova</b>.
+            Tento zoznam pomáha nastaviť očakávania, riziká a rozhodnutia ešte pred návrhom.
           </p>
 
           <div class="notice" style="margin-top:16px">
-            NTP je <b>tier-0 služba</b>. Ak čas nesedí, zlyháva bezpečnosť, audit aj troubleshooting.
-            Minimum štandard je viac zdrojov času, monitoring driftu (nie len dostupnosti),
-            jasné vlastníctvo a postup pri incidente.
+            „Backup beží“ ešte neznamená, že viete obnoviť. Kritické je mať definované <b>RPO/RTO</b>,
+            pravidelne <b>testovanú obnovu</b> a <b>oddelené prístupy</b> pre recovery (aj pri ransomvéri).
+            Minimum štandard je jasný vlastník, runbook obnovy a merateľný čas obnovy pre top služby.
           </div>
         </div>
       </div>
@@ -121,28 +121,28 @@
         <div class="card pad">
           <h2>Kľúčové otázky</h2>
           <ul class="list">
-            <li><b>Zdroje času:</b> sú jasne definované primárne a záložné zdroje (vrátane dôvery a redundancie)?</li>
-            <li><b>Hybrid:</b> ako je riešená synchronizácia medzi on-prem a cloudom (latencia, hierarchia, failover)?</li>
-            <li><b>Monitoring:</b> sledujete <b>offset/drift</b> a stav synchronizácie, nie len „server je up“?</li>
-            <li><b>Zmeny:</b> kto môže meniť NTP konfiguráciu, ako sa zmena schvaľuje a ako sa overí dopad?</li>
-            <li><b>Incident:</b> máte postup, kto rozhoduje a aké sú kroky pri incidente spôsobenom časovým driftom?</li>
+            <li><b>RPO/RTO:</b> aká je tolerancia straty dát (RPO) a aký je akceptovaný čas obnovy (RTO) pre kritické služby?</li>
+            <li><b>Rozsah:</b> zálohujete len dáta, alebo aj <b>konfigurácie</b>, <b>kľúče</b>, <b>secrets</b> a <b>infra state</b> (napr. IaC)?</li>
+            <li><b>Prístupy:</b> kde sú uložené prístupy na obnovu a sú <b>oddelené</b> od bežných účtov (least privilege, break-glass)?</li>
+            <li><b>Testovanie:</b> prebiehajú pravidelné testy obnovy a máte k nim výsledky (úspešnosť, čas obnovy, zistenia)?</li>
+            <li><b>Veľký incident:</b> aký je postup pri ransomvéri alebo rozsiahlej poruche (napr. výpadok lokality/regionu)?</li>
           </ul>
 
           <div class="hr"></div>
 
-          <h2>Poznámka k dopadom</h2>
+          <h2>Bezpečnosť a prevádzka</h2>
           <p>
-            Problémy s časom sa často prejavia nepriamo (TLS certifikáty, Kerberos/SSO, korelácia logov, audit trail).
-            Preto má NTP zmysel riešiť ako prevádzkovateľnú „tier-0“ službu: jasné vlastníctvo, monitoring a runbook.
+            Dobrý návrh záloh rieši aj bezpečnosť: oddelené prístupy, auditovateľnosť, ochranu pred zmenami (immutability/retention lock)
+            a jasné runbooky obnovy. Cieľ je, aby bola obnova zvládnuteľná aj v stresovej situácii.
           </p>
 
           <div class="hr"></div>
 
           <h2>Súvisiace</h2>
           <ul class="list">
-            <li><a href="/sluzby/monitoring-infrastruktury.html">Monitoring infra</a></li>
-            <li><a href="/navrh-infrastruktury/monitoring-vs-logy.html">Monitoring vs logy</a></li>
-            <li><a href="/navrh-infrastruktury/incident-a-change-procesy.html">Incident &amp; Change procesy</a></li>
+            <li><a href="/clanky/incident-a-change-procesy.html">Incident &amp; Change procesy</a></li>
+            <li><a href="/clanky/pristupy-a-identita.html">Prístupy &amp; identita</a></li>
+            <li><a href="/clanky/dokumentacia-a-runbooky.html">Dokumentácia &amp; runbooky</a></li>
           </ul>
         </div>
       </div>

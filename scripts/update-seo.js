@@ -15,7 +15,7 @@ const pagesConfig = {
     description: 'Pomáhame malým, stredným a veľkým firmám získať prehľadnú, stabilnú a bezpečnú IT infraštruktúru. Cloud, monitoring, zálohovanie, návrh a stabilizácia IT prostredia.',
     keywords: 'IT infraštruktúra, cloud AWS Azure, monitoring, zálohovanie, DNS DHCP, NTP, IT konzultácia'
   },
-  'sluzby.html': {
+  'sluzby/index.html': {
     title: 'Služby | WOV Tech',
     description: 'Pomáhame malým, stredným a veľkým firmám s návrhom a stabilizáciou IT infraštruktúry. Cloud AWS/Azure/GCP, DNS, DHCP, NTP, monitoring, log manažment, zálohovanie a obnova.',
     keywords: 'IT služby, návrh infraštruktúry, cloud, monitoring, zálohy, DNS DHCP, log manažment'
@@ -25,7 +25,7 @@ const pagesConfig = {
     description: 'Kontaktujte WOV Tech s. r. o. Pomáhame malým, stredným a veľkým firmám s návrhom a stabilizáciou IT infraštruktúry. E-mail, telefón a kontaktný formulár.',
     keywords: 'kontakt WOV Tech, IT konzultácia, kontaktný formulár, support'
   },
-  'navrh-infrastruktury.html': {
+  'sluzby/navrh-infrastruktury.html': {
     title: 'Návrh IT infraštruktúry | WOV Tech',
     description: 'Pomáhame malým, stredným a veľkým firmám navrhnúť prehľadnú, stabilnú a bezpečnú IT infraštruktúru.',
     keywords: 'návrh IT infraštruktúry, IT konzultácia, stabilnú IT, bezpečnú IT, IT systém'
@@ -67,9 +67,9 @@ const ogTemplate = `  <!-- Open Graph Meta Tags -->
 
 function updateMetadata(filePath, config) {
   let content = fs.readFileSync(filePath, 'utf-8');
-  const filename = path.basename(filePath);
+  const relativePath = path.relative('.', filePath).replace(/\\/g, '/');
   const baseUrl = 'https://test.wovtech.sk/';
-  const fileUrl = baseUrl + filename;
+  const fileUrl = baseUrl + relativePath;
 
   // Update meta description
   content = content.replace(
@@ -144,14 +144,14 @@ const htmlFiles = findHtmlFiles('.');
 let updated = 0;
 
 htmlFiles.forEach(file => {
-  const filename = path.basename(file);
-  if (pagesConfig[filename]) {
+  const relativePath = path.relative('.', file).replace(/\\/g, '/');
+  if (pagesConfig[relativePath]) {
     try {
-      updateMetadata(file, pagesConfig[filename]);
+      updateMetadata(file, pagesConfig[relativePath]);
       updated++;
-      console.log(`✅ ${path.relative('.', file)}`);
+      console.log(`✅ ${relativePath}`);
     } catch (error) {
-      console.log(`❌ ${filename}: ${error.message}`);
+      console.log(`❌ ${relativePath}: ${error.message}`);
     }
   }
 });
