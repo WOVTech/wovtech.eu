@@ -813,30 +813,24 @@ main#content a.cta.small::after{
 
 .footer-grid{
   display:flex;
-  justify-content:flex-start;
-  text-align:left;
-}
-
-/* override container centering for footer */
-.footer .container{
-  margin-left: 0 !important;
-  margin-right: 0 !important;
+  justify-content:center;
+  text-align:center;
 }
 
 .footer-grid > div:last-child:not(:first-child){
   display:none !important;
 }
 
-/* brand blok left-aligned */
+/* brand blok centrovaný v footeri, ale text left-aligned */
 .footer .brand{
   display:flex !important;
   flex-direction:row !important;
   align-items:flex-start !important;
-  justify-content:flex-start !important;
+  justify-content:center !important;
   gap:10px !important;
   width: fit-content !important;
-  margin-left:0 !important;
-  margin-right:0 !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
   margin-bottom:10px !important;
   color: rgba(238,244,255,.96) !important;
 }
@@ -866,6 +860,7 @@ main#content a.cta.small::after{
   gap:2px !important;
   color: rgba(238,244,255,.96) !important;
   transform: translateY(-2px);
+  width: auto !important;
 }
 
 /* sub */
@@ -879,13 +874,13 @@ main#content a.cta.small::after{
   display:block;
   margin-top:12px;
   color: rgba(238,244,255,.88);
-  text-align:left;
+  text-align:center;
 }
 
-/* odkazy left-align (inline div s margin-top) */
+/* odkazy centrovať (inline div s margin-top) */
 .footer-grid > div > div[style*="margin-top"]{
   display:flex !important;
-  justify-content:flex-start !important;
+  justify-content:center !important;
   gap:16px !important;
   width:100% !important;
 }
@@ -978,12 +973,12 @@ main#content a.cta.small::after{
     display:grid !important;
     grid-template-columns: 36px auto !important;
     align-items:center !important;
-    justify-content:flex-start !important;
+    justify-content:center !important;
     gap:10px !important;
     width:100% !important;
     max-width:420px;
-    margin-left:0 !important;
-    margin-right:0 !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
   }
 
   .footer .brand-logo,
@@ -992,7 +987,7 @@ main#content a.cta.small::after{
     width:36px;
     height:36px;
     top:0 !important;
-    justify-self:start;
+    justify-self:end;
   }
 
   .footer .brand > span{
