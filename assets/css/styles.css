@@ -173,12 +173,12 @@ small{color:var(--muted)}
   min-width: 240px;
   display: none;
   padding: 8px;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(15,23,42,.10);
   border-radius: 14px;
-  background: rgba(16, 26, 45, .78);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: none;
+  background: var(--heroCard);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 8px 24px rgba(15,23,42,.12);
   z-index: 20;
 }
 
@@ -196,19 +196,19 @@ small{color:var(--muted)}
   font-weight: 700;
   letter-spacing: .08em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: rgba(15,23,42,.72);
 }
 
 .dropdown .submenu a{
   display:block;
   padding: 8px 10px;
   border-radius: 10px;
-  color: rgba(238,244,255,.96);
+  color: rgba(15,23,42,.90);
 }
 
 .dropdown .submenu a:hover{
-  background: rgba(255,255,255,.06);
-  color: var(--text);
+  background: rgba(15,23,42,.06);
+  color: #0f172a;
 }
 
 @media (max-width: 720px){
