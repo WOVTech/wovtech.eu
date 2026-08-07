@@ -46,10 +46,22 @@
         </a>
 
         <div class="menu">
-          <a href="/" class="home-link" aria-label="Domov"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 10.5L12 3l9 7.5" stroke="currentColor" stroke-width="2"/><path d="M5.25 9.75V21h13.5V9.75" stroke="currentColor" stroke-width="2"/></svg></a>
-          <a href="/navrh-infrastruktury.html">Návrh IT infraštruktúry</a>
-          <a href="/sluzby.html">Služby</a>
-          <a href="/clanky.html" aria-current="page">Články</a>
+          <a href="/" aria-label="Domov">Domov</a>
+          <div class="dropdown">
+            <a href="/sluzby.html" class="drop-trigger">Služby ▾</a>
+            <div class="submenu" role="menu">
+              <a href="/navrh-infrastruktury.html">Návrh IT infraštruktúry</a>
+              <a href="/sluzby/cloud-aws-azure.html">Cloud AWS / Azure</a>
+              <a href="/sluzby/monitoring-infrastruktury.html">Monitoring infraštruktúry</a>
+              <a href="/sluzby/log-management.html">Log management</a>
+              <a href="/sluzby/zalohy-a-obnova.html">Zálohovanie a obnova</a>
+              <a href="/sluzby/ddi-dns-dhcp-ipam.html">DDI / DNS / DHCP / IPAM</a>
+              <a href="/sluzby/ntp.html">NTP</a>
+            </div>
+          </div>
+          <a href="/clanky.html">Články</a>
+          <a href="/checklisty.html">Checklisty</a>
+          <a href="/o-nas.html">O nás</a>
           <a href="/kontakt.html">Kontakt</a>
         </div>
       </nav>
