@@ -84,12 +84,14 @@ small{color:var(--muted)}
 }
 
 .nav{
-  display:flex;
+  display:grid;
+  grid-template-columns:minmax(180px, 1fr) auto minmax(180px, 1fr);
   align-items:center;
-  justify-content:space-between;
   padding: 14px 0;
-  gap: 12px;
+  gap:18px;
 }
+
+.header .brand{justify-self:start}
 
 /* BRAND – BASE je pre tmavé pozadie (footer/sekcie) */
 .brand{
@@ -134,7 +136,7 @@ small{color:var(--muted)}
   align-items:center;
   gap: 8px;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content:center;
   margin: 0;
   padding: 0;
   list-style:none;
@@ -160,6 +162,59 @@ small{color:var(--muted)}
   border-color: var(--line);
   background: rgba(255,255,255,.05);
   color: var(--text);
+}
+
+.language-area{
+  display:flex;
+  justify-content:flex-end;
+  justify-self:end;
+}
+
+.language-switch{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  min-height:38px;
+  padding:4px 11px 4px 5px;
+  border:1px solid rgba(0,153,255,.48);
+  border-radius:999px;
+  color:var(--text);
+  background:linear-gradient(135deg, rgba(0,170,255,.16), rgba(0,82,204,.14));
+  box-shadow:0 8px 22px rgba(0,82,204,.2), inset 0 1px 0 rgba(255,255,255,.1);
+  font-size:13px;
+  font-weight:750;
+  white-space:nowrap;
+  transition:border-color .2s ease, background .2s ease, transform .2s ease;
+}
+
+.language-switch:hover{
+  color:#fff;
+  border-color:rgba(0,174,255,.8);
+  background:linear-gradient(135deg, rgba(0,174,255,.28), rgba(0,82,204,.26));
+  transform:translateY(-1px);
+}
+
+.language-switch:focus-visible{
+  outline:2px solid #00aaff;
+  outline-offset:3px;
+}
+
+.language-code{
+  display:grid;
+  place-items:center;
+  width:28px;
+  height:28px;
+  border-radius:50%;
+  color:#fff;
+  background:linear-gradient(145deg, #00b7ff 0%, #0088f5 45%, #004fc4 100%);
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.04em;
+  box-shadow:0 4px 12px rgba(0,110,230,.38), inset 0 1px 0 rgba(255,255,255,.24);
+}
+
+.language-label{
+  color:rgba(238,244,255,.92);
 }
 
 .dropdown{
@@ -210,16 +265,23 @@ small{color:var(--muted)}
   color: #0f172a;
 }
 
-@media (max-width: 720px){
+@media (max-width: 900px){
   .nav{
-    flex-direction: column;
-    align-items: flex-start;
+    grid-template-columns:auto 1fr auto;
+    gap:10px 12px;
   }
 
   .menu{
+    grid-column:1 / -1;
+    grid-row:2;
     width: 100%;
-    justify-content: flex-start;
+    justify-content:center;
     gap: 6px;
+  }
+
+  .language-area{
+    grid-column:3;
+    grid-row:1;
   }
 
   .dropdown .submenu{
@@ -956,35 +1018,31 @@ main#content a.cta.small::after{
 
   .nav{
     display:grid;
-    grid-template-columns: 1fr;
-    gap:10px;
+    grid-template-columns:auto 1fr auto;
+    gap:10px 12px;
     padding:10px 0;
   }
 
   .header .brand{
-    display:grid;
-    grid-template-columns: 28px auto 28px;
+    display:flex;
     align-items:center;
-    width:100%;
+    width:auto;
     gap:10px;
   }
 
   .header .brand-logo{
-    grid-column:1;
     width:28px;
     height:28px;
     border-radius:8px;
-    justify-self:end;
   }
 
   .header .brand > span{
-    grid-column:2;
     transform:none;
     display:flex;
     flex-direction:column;
-    align-items:center;
+    align-items:flex-start;
     justify-content:center;
-    text-align:center;
+    text-align:left;
   }
 
   .header .brand{
@@ -1005,6 +1063,13 @@ main#content a.cta.small::after{
     flex-wrap:wrap;
     justify-content:center;
     gap:8px;
+  }
+
+  .language-label{display:none}
+
+  .language-switch{
+    min-height:34px;
+    padding:3px;
   }
 
   .menu a{

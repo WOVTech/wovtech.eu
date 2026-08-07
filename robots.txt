@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://test.wovtech.sk/sitemap.xml
+Sitemap: https://wovtech.sk/sitemap.xml
