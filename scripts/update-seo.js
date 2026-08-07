@@ -25,10 +25,10 @@ const pagesConfig = {
     description: 'Kontaktujte WOV Tech s. r. o. Pomáhame malým, stredným a veľkým firmám s návrhom a stabilizáciou IT infraštruktúry. E-mail, telefón a kontaktný formulár.',
     keywords: 'kontakt WOV Tech, IT konzultácia, kontaktný formulár, support'
   },
-  'navrh-infrastruktury.html': {
-    title: 'Návrh IT infrastruktury | WOV Tech',
+  'navrh-infrastruktúry.html': {
+    title: 'Návrh IT infrastruktúry | WOV Tech',
     description: 'Pomáhame malým, stredným a veľkým firmám navrhnúť prehľadnú, stabilnú a bezpečnú IT infraštruktúru.',
-    keywords: 'návrh IT infrastruktury, IT konzultácia, stabilnú IT, bezpečnú IT, IT systém'
+    keywords: 'návrh IT infrastruktúry, IT konzultácia, stabilnú IT, bezpečnú IT, IT systém'
   },
   '404.html': {
     title: '404 - Stránka nenájdená | WOV Tech',
