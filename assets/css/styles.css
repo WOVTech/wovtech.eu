@@ -802,7 +802,7 @@ main#content a.cta.small::after{
    FOOTER – logo pri texte, ale názov centrovaný nad scope
 ================================================= */
 .footer{
-  padding: 20px 0 30px;
+  padding: 15px 0 20px;
   margin-top: 22px;
   background: rgba(11,18,32,.55);
   backdrop-filter: blur(10px);
@@ -815,6 +815,12 @@ main#content a.cta.small::after{
   display:flex;
   justify-content:flex-start;
   text-align:left;
+}
+
+/* override container centering for footer */
+.footer .container{
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 
 .footer-grid > div:last-child:not(:first-child){
@@ -831,6 +837,7 @@ main#content a.cta.small::after{
   width: fit-content !important;
   margin-left:0 !important;
   margin-right:0 !important;
+  margin-bottom:10px !important;
   color: rgba(238,244,255,.96) !important;
 }
 
@@ -870,7 +877,7 @@ main#content a.cta.small::after{
 /* copyright */
 .footer-grid small{
   display:block;
-  margin-top:8px;
+  margin-top:12px;
   color: rgba(238,244,255,.88);
   text-align:left;
 }
@@ -969,14 +976,14 @@ main#content a.cta.small::after{
 
   .footer .brand{
     display:grid !important;
-    grid-template-columns: 36px auto 36px !important;
+    grid-template-columns: 36px auto !important;
     align-items:center !important;
-    justify-content:center !important;
+    justify-content:flex-start !important;
     gap:10px !important;
     width:100% !important;
     max-width:420px;
-    margin-left:auto !important;
-    margin-right:auto !important;
+    margin-left:0 !important;
+    margin-right:0 !important;
   }
 
   .footer .brand-logo,
@@ -985,16 +992,16 @@ main#content a.cta.small::after{
     width:36px;
     height:36px;
     top:0 !important;
-    justify-self:end;
+    justify-self:start;
   }
 
   .footer .brand > span{
     grid-column:2;
     display:flex !important;
     flex-direction:column !important;
-    align-items:center !important;
-    justify-content:center !important;
-    text-align:center !important;
+    align-items:flex-start !important;
+    justify-content:flex-start !important;
+    text-align:left !important;
     gap:2px !important;
     transform:none !important;
   }
