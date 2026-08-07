@@ -10,6 +10,7 @@
 </head>
 <body>
   <script src="/assets/js/webp-detect.js"></script>
+  <script src="/assets/js/dropdown.js"></script>
   <header class="header">
     <div class="container">
       <nav class="nav" aria-label="Hlavná navigácia">
@@ -19,9 +20,9 @@
         </a>
         <div class="menu">
           <a href="/" aria-label="Domov">Domov</a>
-          <div class="dropdown">
-            <a href="/sluzby.html" class="drop-trigger">Služby ▾</a>
-            <div class="submenu" role="menu">
+          <div class="dropdown" data-dropdown>
+            <a href="/sluzby.html" class="drop-trigger" data-dropdown-trigger>Služby ▾</a>
+            <div class="submenu" role="menu" data-dropdown-menu>
               <span class="submenu-title">Jednotlivé služby</span>
               <a href="/navrh-infrastruktury.html">Návrh IT infraštruktúry</a>
               <a href="/sluzby/cloud-aws-azure.html">Cloud AWS / Azure</a>
