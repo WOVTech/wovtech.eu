@@ -1,28 +1,5 @@
-# WOV Tech s. r. o. - Robots Configuration
-
-# Block Archive.org and similar bots
-User-agent: ia_archiver
-Disallow: /
-
-User-agent: archive.org_bot
-Disallow: /
-
-# Block some aggressive crawlers
-User-agent: MJ12bot
-Crawl-delay: 10
-
-User-agent: AhrefsBot
-Crawl-delay: 10
-
-# Allow all other bots
+# WOV Tech s. r. o. — pravidlá pre vyhľadávače
 User-agent: *
 Allow: /
 
-# Block assets folder from indexing (optional - already in noindex)
-Disallow: /node_modules/
-
-# Sitemap
 Sitemap: https://test.wovtech.sk/sitemap.xml
-
-# Crawl delay (ms)
-Crawl-delay: 1

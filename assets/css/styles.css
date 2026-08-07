@@ -324,6 +324,37 @@ small{color:var(--muted)}
 .card.pad{padding: 18px}
 .card.pad-lg{padding: 22px}
 
+.breadcrumbs{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:6px;
+  margin-bottom:14px;
+  font-size:14px;
+  line-height:1.4;
+  color:rgba(15,23,42,.68);
+}
+
+.breadcrumbs a{
+  color:#315f9e !important;
+  text-decoration:underline;
+  text-decoration-color:rgba(49,95,158,.35);
+  text-underline-offset:3px;
+}
+
+.breadcrumbs [aria-current="page"]{
+  overflow:hidden;
+  max-width:min(100%, 58ch);
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+
+.article-meta{
+  margin:-2px 0 16px !important;
+  font-size:14px;
+  color:rgba(15,23,42,.68) !important;
+}
+
 /* =========================
    BODY STAGE (datacenter background)
 ========================= */
@@ -343,6 +374,17 @@ main#content::before{
   opacity: .72;
   z-index:0;
   pointer-events:none;
+}
+
+/* Moderné formáty bez JavaScript detekcie; PNG zostáva ako fallback. */
+@supports (background-image: url('data:image/webp;base64,UklGRiYAAABXRUJQVlA4IBIAAAAwAQCdASoBAAEADsD+JaQAA3AA/v3AgAA=')) {
+  .hero::before{
+    background-image:url("../img/hero-laptop.webp");
+  }
+
+  main#content::before{
+    background-image:url("../img/hero-datacenter.webp");
+  }
 }
 
 main#content::after{
