@@ -38,6 +38,39 @@
 
 <body>
   <script src="/assets/js/webp-detect.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const dropdown = document.querySelector('[data-dropdown]');
+      const trigger = dropdown?.querySelector('[data-dropdown-trigger]');
+      const menu = dropdown?.querySelector('[data-dropdown-menu]');
+
+      if (!dropdown || !trigger || !menu) return;
+
+      const toggle = (force) => {
+        const shouldOpen = typeof force === 'boolean' ? force : !dropdown.classList.contains('is-open');
+        dropdown.classList.toggle('is-open', shouldOpen);
+      };
+
+      trigger.addEventListener('click', (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        toggle();
+      });
+
+      document.addEventListener('click', (event) => {
+        if (!dropdown.contains(event.target)) {
+          toggle(false);
+        }
+      });
+
+      dropdown.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          toggle(false);
+          trigger.focus();
+        }
+      });
+    });
+  </script>
   <a class="skip-link" href="#content">Preskočiť na obsah</a>
 
   <header class="header">
@@ -53,9 +86,9 @@
 
         <div class="menu">
           <a href="/" aria-label="Domov">Domov</a>
-          <div class="dropdown">
-            <a href="/sluzby.html" class="drop-trigger">Služby ▾</a>
-            <div class="submenu" role="menu">
+          <div class="dropdown" data-dropdown>
+            <a href="/sluzby.html" class="drop-trigger" data-dropdown-trigger>Služby ▾</a>
+            <div class="submenu" role="menu" data-dropdown-menu>
               <span class="submenu-title">Jednotlivé služby</span>
               <a href="/navrh-infrastruktury.html">Návrh IT infraštruktúry</a>
               <a href="/sluzby/cloud-aws-azure.html">Cloud AWS / Azure</a>

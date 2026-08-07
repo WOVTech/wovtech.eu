@@ -182,8 +182,7 @@ small{color:var(--muted)}
   z-index: 20;
 }
 
-.dropdown:hover .submenu,
-.dropdown:focus-within .submenu{
+.dropdown.is-open .submenu{
   display: flex;
   flex-direction: column;
   gap: 4px;
