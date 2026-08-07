@@ -1,12 +1,35 @@
 <!doctype html>
 <html lang="sk">
 <head>
+  <link rel="icon" type="image/png" href="/assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/img/favicon.png">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Príručky | WOV Tech</title>
+
   <meta name="description" content="Príručky pre IT infraštruktúru, cloud, monitoring, zálohovanie a bezpečnosť." />
-  <link rel="canonical" href="https://test.wovtech.sk/prirucky.html" />
+  <meta name="keywords" content="IT príručky, infraštruktúra, cloud, monitoring, zálohovanie, bezpečnosť, kontrolné zoznamy" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://test.wovtech.sk/prirucky/" />
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Príručky | WOV Tech" />
+  <meta property="og:description" content="Príručky pre IT infraštruktúru, cloud, monitoring, zálohovanie a bezpečnosť." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://test.wovtech.sk/prirucky/" />
+  <meta property="og:image" content="https://test.wovtech.sk/assets/img/logo-full.png" />
+  <meta property="og:image:width" content="800" />
+  <meta property="og:image:height" content="412" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Príručky | WOV Tech" />
+  <meta name="twitter:description" content="Príručky pre IT infraštruktúru, cloud, monitoring, zálohovanie a bezpečnosť." />
+  <meta name="twitter:image" content="https://test.wovtech.sk/assets/img/logo-full.png" />
+
+  <meta name="theme-color" content="#0b1220" />
   <link rel="stylesheet" href="/assets/css/styles.min.css" />
+  <link rel="stylesheet" href="/assets/css/webp.css" />
 </head>
 <body>
   <script src="/assets/js/webp-detect.js"></script>
@@ -37,10 +60,10 @@
             </div>
           </div>
           <div class="dropdown" data-dropdown>
-            <a href="/clanky.html" class="drop-trigger" data-dropdown-trigger>Články ▾</a>
+            <a href="/clanky/" class="drop-trigger" data-dropdown-trigger>Články ▾</a>
             <div class="submenu" role="menu" data-dropdown-menu>
               <span class="submenu-title">Články</span>
-              <a href="/clanky.html">Všetky články</a>
+              <a href="/clanky/">Všetky články</a>
               <a href="/clanky/monitoring-vs-logy.html">Monitoring vs. logy</a>
               <a href="/clanky/zalohy-a-obnova.html">Zálohovanie a obnova</a>
               <a href="/clanky/ntp-preco-je-cas-kriticky.html">NTP: prečo je správny čas kritický</a>
@@ -51,10 +74,10 @@
             </div>
           </div>
           <div class="dropdown" data-dropdown>
-            <a href="/prirucky.html" class="drop-trigger" data-dropdown-trigger>Príručky ▾</a>
+            <a href="/prirucky/" class="drop-trigger" data-dropdown-trigger>Príručky ▾</a>
             <div class="submenu" role="menu" data-dropdown-menu>
               <span class="submenu-title">Príručky a kontrolné zoznamy</span>
-              <a href="/prirucky.html">Všetky príručky</a>
+              <a href="/prirucky/">Všetky príručky</a>
               <a href="/prirucky/ddi-dns-dhcp-ipam.html">DDI / DNS / DHCP / IPAM — sieťové služby</a>
               <a href="/prirucky/ntp.html">NTP — presný čas v sieti</a>
               <a href="/prirucky/cloud-aws-azure.html">Cloud AWS / Azure — cloudová architektúra</a>
@@ -197,5 +220,42 @@
       </div>
     </div>
   </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Domov",
+        "item": "https://test.wovtech.sk/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Príručky",
+        "item": "https://test.wovtech.sk/prirucky/"
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Príručky | WOV Tech",
+    "url": "https://test.wovtech.sk/prirucky/",
+    "description": "Príručky pre IT infraštruktúru, cloud, monitoring, zálohovanie a bezpečnosť.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "WOV Tech s. r. o.",
+      "url": "https://test.wovtech.sk",
+      "logo": "https://test.wovtech.sk/assets/img/logo-full.png"
+    }
+  }
+  </script>
 </body>
 </html>
