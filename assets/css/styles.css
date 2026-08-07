@@ -228,10 +228,6 @@ small{color:var(--muted)}
     display: none;
   }
 
-  .dropdown:hover .submenu,
-  .dropdown:focus-within .submenu{
-    display: grid;
-  }
 }
 
 /* CTA – BASE pre tmavé pozadie (sekcie/footer) */
