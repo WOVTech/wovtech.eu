@@ -821,11 +821,11 @@ main#content a.cta.small::after{
   display:none !important;
 }
 
-/* brand blok centrovaný v footeri, ale text left-aligned */
+/* brand blok centrovaný v footeri, logo vľavo od centrovaného dvojriadku */
 .footer .brand{
-  display:flex !important;
-  flex-direction:row !important;
-  align-items:flex-start !important;
+  display:grid !important;
+  grid-template-columns:36px auto 36px !important;
+  align-items:center !important;
   justify-content:center !important;
   gap:10px !important;
   width: fit-content !important;
@@ -835,36 +835,51 @@ main#content a.cta.small::after{
   color: rgba(238,244,255,.96) !important;
 }
 
+/* druhé logo v treťom stĺpci vytvára symetrický brand blok */
+.footer .brand::after{
+  content:"";
+  display:block;
+  width:36px;
+  height:36px;
+  border-radius:10px;
+  background:url("../img/logo-mark.png") center / contain no-repeat;
+}
+
 /* logo */
 .footer .brand-logo,
 .footer .brand-badge{
+  grid-column:1;
   width:36px;
   height:36px;
   filter:none !important;
   margin:0 !important;
 }
 
-/* optické zarovnanie: logo o trochu nižšie */
+/* logo je vertikálne vycentrované oproti obom riadkom textu */
 .footer .brand-logo,
 .footer .brand-badge{
   position: relative;
-  top: 4px;
+  top: 0;
 }
 
-/* text blok: left-align názov aj sub nad sebou */
+/* názov a slogan sú pod sebou a oba vycentrované */
 .footer .brand > span{
+  grid-column:2;
   display:flex !important;
   flex-direction:column !important;
-  align-items:flex-start !important;
-  text-align:left !important;
+  align-items:center !important;
+  text-align:center !important;
   gap:2px !important;
   color: rgba(238,244,255,.96) !important;
-  transform: translateY(-2px);
+  transform:none;
   width: auto !important;
 }
 
 /* sub */
 .footer .brand .sub{
+  display:block !important;
+  width:100% !important;
+  white-space:nowrap;
   color: rgba(238,244,255,.78) !important;
   font-weight:650;
 }
@@ -971,7 +986,7 @@ main#content a.cta.small::after{
 
   .footer .brand{
     display:grid !important;
-    grid-template-columns: 36px auto !important;
+    grid-template-columns:36px auto 36px !important;
     align-items:center !important;
     justify-content:center !important;
     gap:10px !important;
@@ -994,9 +1009,9 @@ main#content a.cta.small::after{
     grid-column:2;
     display:flex !important;
     flex-direction:column !important;
-    align-items:flex-start !important;
-    justify-content:flex-start !important;
-    text-align:left !important;
+    align-items:center !important;
+    justify-content:center !important;
+    text-align:center !important;
     gap:2px !important;
     transform:none !important;
   }
