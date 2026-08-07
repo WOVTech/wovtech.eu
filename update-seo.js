@@ -7,9 +7,24 @@ console.log('🔍 Aktualizujem SEO metadata na všetkých HTML súboroch...\n');
 
 // Konfigurácia strán
 const pagesConfig = {
+  'index.html': {
+    title: 'WOV Tech s. r. o. | IT infraštruktúra pre malé, stredné a veľké firmy',
+    description: 'Pomáhame malým, stredným a veľkým firmám získať prehľadnú, stabilnú a bezpečnú IT infraštruktúru. Cloud, monitoring, zálohovanie, návrh a stabilizácia IT prostredia.',
+    keywords: 'IT infraštruktúra, cloud AWS Azure, monitoring, zálohovanie, DNS DHCP, NTP, IT konzultácia'
+  },
+  'sluzby.html': {
+    title: 'Služby | WOV Tech',
+    description: 'Pomáhame malým, stredným a veľkým firmám s návrhom a stabilizáciou IT infraštruktúry. Cloud AWS/Azure/GCP, DNS, DHCP, NTP, monitoring, log management, zálohovanie a obnova.',
+    keywords: 'IT služby, návrh infraštruktúry, cloud, monitoring, zálohy, DNS DHCP, log management'
+  },
+  'kontakt.html': {
+    title: 'Kontakt | WOV Tech',
+    description: 'Kontaktujte WOV Tech s. r. o. Pomáhame malým, stredným a veľkým firmám s návrhom a stabilizáciou IT infraštruktúry. E-mail, telefón a kontaktný formulár.',
+    keywords: 'kontakt WOV Tech, IT konzultácia, kontaktný formulár, support'
+  },
   'navrh-infrastruktury.html': {
     title: 'Návrh IT infraštruktúry | WOV Tech',
-    description: 'Pomáhame malým a stredným firmám navrhnúť prehľadnú, stabilnú a bezpečnú IT infraštruktúru.',
+    description: 'Pomáhame malým, stredným a veľkým firmám navrhnúť prehľadnú, stabilnú a bezpečnú IT infraštruktúru.',
     keywords: 'návrh infraštruktúry, IT konzultácia, stabilnú IT, bezpečnú IT, IT systém'
   },
   '404.html': {
