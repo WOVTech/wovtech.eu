@@ -803,7 +803,7 @@ main#content a.cta.small::after{
 ================================================= */
 .footer{
   padding: 15px 0 20px;
-  margin-top: 22px;
+  margin-top: 0;
   background: rgba(11,18,32,.55);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
