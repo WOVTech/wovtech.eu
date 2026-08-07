@@ -4,6 +4,9 @@ const sharp = require('sharp');
 const fs = require('fs');
 const path = require('path');
 
+const projectRoot = path.resolve(__dirname, '..');
+process.chdir(projectRoot);
+
 const imgDir = './assets/img';
 
 // Konfigurácia optimalizácie pre každý obrázok

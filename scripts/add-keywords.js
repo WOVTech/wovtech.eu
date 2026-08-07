@@ -3,6 +3,9 @@
 const fs = require('fs');
 const path = require('path');
 
+const projectRoot = path.resolve(__dirname, '..');
+process.chdir(projectRoot);
+
 console.log('🏷️ Pridávam keywords meta tagy na všetky HTML súbory...\n');
 
 // Default keywords pre rôzne typy strán

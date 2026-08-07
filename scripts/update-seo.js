@@ -3,6 +3,9 @@
 const fs = require('fs');
 const path = require('path');
 
+const projectRoot = path.resolve(__dirname, '..');
+process.chdir(projectRoot);
+
 console.log('🔍 Aktualizujem SEO metadata na všetkých HTML súboroch...\n');
 
 // Konfigurácia strán

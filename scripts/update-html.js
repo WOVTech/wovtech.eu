@@ -2,7 +2,9 @@
 
 const fs = require('fs');
 const path = require('path');
-const glob = require('glob').sync;
+
+const projectRoot = path.resolve(__dirname, '..');
+process.chdir(projectRoot);
 
 console.log('🔧 Aktualizujem HTML súbory na WebP optimalizáciu...\n');
 
