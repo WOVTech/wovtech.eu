@@ -11,6 +11,8 @@
 <body>
   <script src="/assets/js/webp-detect.js"></script>
   <script src="/assets/js/dropdown.js"></script>
+  <a class="skip-link" href="#content">Preskočiť na obsah</a>
+
   <header class="header">
     <div class="container">
       <nav class="nav" aria-label="Hlavná navigácia">
@@ -67,27 +69,115 @@
       </nav>
     </div>
   </header>
-  <main id="content" class="container" style="padding: 48px 0 80px;">
-    <h1>Príručky a kontrolné zoznamy</h1>
-    <p>Tu nájdete praktické príručky, ktoré pomáhajú overiť, čo je potrebné pripraviť alebo skontrolovať v IT infraštruktúre.</p>
-    <p>Každá príručka je zameraná na konkrétnu oblasť a dá sa použiť pri návrhu, audite alebo zlepšovaní existujúcej infraštruktúry.</p>
+  <main id="content">
+    <section class="hero">
+      <div class="grain" aria-hidden="true"></div>
 
-    <h2>Na čo sú tieto príručky?</h2>
-    <ul>
-      <li>pomáhajú zistiť, čo je potrebné nastaviť</li>
-      <li>slúžia ako kontrolný zoznam pri návrhu alebo revízii</li>
-      <li>môžu byť užitočné pred nasadením nových služieb alebo pri audite</li>
-    </ul>
+      <div class="container hero-grid">
+        <div class="card pad-lg">
+          <h1>Príručky a kontrolné zoznamy pre IT infraštruktúru</h1>
+          <p>
+            Tu nájdete praktické príručky, ktoré pomáhajú overiť, čo je potrebné pripraviť alebo skontrolovať v IT prostredí.
+            Sú určené pre tí, ktorí chcú mať v infraštruktúre viac poriadku, lepšiu orientáciu a menej improvizácie.
+          </p>
+          <p>
+            Každá príručka je zameraná na konkrétnu oblasť a dá sa použiť pri návrhu, audite, stabilizácii alebo zlepšovaní existujúcej infraštruktúry.
+          </p>
 
-    <h2>Všetky príručky</h2>
-    <ul>
-      <li><a href="/checklisty/cloud-aws-azure.html">Cloud (AWS / Azure) — kontrola cloudového prostredia</a></li>
-      <li><a href="/checklisty/monitoring-infrastruktury.html">Monitoring infraštruktúry — čo sledujeme a prečo</a></li>
-      <li><a href="/checklisty/log-management.html">Log management — zber a analýza logov</a></li>
-      <li><a href="/checklisty/zalohy-a-obnova.html">Zálohovanie a obnova — obnoviteľnosť systémov</a></li>
-      <li><a href="/checklisty/ddi-dns-dhcp-ipam.html">DDI / DNS / DHCP / IPAM — sieťové a adresárske služby</a></li>
-      <li><a href="/checklisty/ntp.html">NTP — presný čas v sieti</a></li>
-    </ul>
+          <div class="hr"></div>
+
+          <p style="margin-top:12px">
+            V praxi sú najviac užitočné v prípadoch, keď chcete rýchlo overiť, či je niečo dôležité prehliadnuté alebo nejasne nastavené.
+          </p>
+        </div>
+
+        <aside class="card pad">
+          <h2>Na čo sú tieto príručky?</h2>
+          <ul class="list" aria-label="Na čo sú príručky vhodné" style="margin-top:10px">
+            <li>pomáhajú zistiť, čo je potrebné nastaviť,</li>
+            <li>slúžia ako kontrolný zoznam pri návrhu alebo revízii,</li>
+            <li>môžu byť užitočné pred nasadením nových služieb alebo pri audite.</li>
+          </ul>
+
+          <div class="hr"></div>
+
+          <p>
+            Ak chcete, môžeme vám tieto príručky prispôsobiť aj konkrétne pre vašu firmu, prostredie alebo typ projektu.
+          </p>
+
+          <div class="hr"></div>
+          <a class="cta small" href="/kontakt.html">Kontaktovať WOV Tech</a>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Všetky príručky</h2>
+        <p>Vyberte si oblasť, ktorá je pre vás aktuálne najdôležitejšia.</p>
+
+        <div class="grid" role="list">
+          <div class="service" role="listitem">
+            <h3>Cloud AWS / Azure</h3>
+            <p>Kontrolný prehľad pre cloudové prostredie, bezpečnosť a základné nastavenia.</p>
+            <a class="link" href="/checklisty/cloud-aws-azure.html">Detail →</a>
+          </div>
+
+          <div class="service" role="listitem">
+            <h3>Monitoring infraštruktúry</h3>
+            <p>Pomáha zistiť, čo je potrebné sledovať, aby sa problémy objavili skôr, než ovplyvnia prevádzku.</p>
+            <a class="link" href="/checklisty/monitoring-infrastruktury.html">Detail →</a>
+          </div>
+
+          <div class="service" role="listitem">
+            <h3>Log management</h3>
+            <p>Praktický pohľad na to, aké logy zberať, kde ich ukladať a ako ich vyhodnocovať.</p>
+            <a class="link" href="/checklisty/log-management.html">Detail →</a>
+          </div>
+
+          <div class="service" role="listitem">
+            <h3>Zálohovanie a obnova</h3>
+            <p>Pomáha overiť, či sú zálohy funkčné, vhodne nastavené a reálne použiteľné pri obrate.</p>
+            <a class="link" href="/checklisty/zalohy-a-obnova.html">Detail →</a>
+          </div>
+
+          <div class="service" role="listitem">
+            <h3>DDI / DNS / DHCP / IPAM</h3>
+            <p>Prehľad najdôležitejších sieťových služieb a vecí, ktoré je dobré kontrolovať.</p>
+            <a class="link" href="/checklisty/ddi-dns-dhcp-ipam.html">Detail →</a>
+          </div>
+
+          <div class="service" role="listitem">
+            <h3>NTP</h3>
+            <p>Pomáha overiť, či je v prostredí správne nastavený presný čas a jeho zdroje.</p>
+            <a class="link" href="/checklisty/ntp.html">Detail →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container two-col">
+        <div class="card pad">
+          <h2>Kedy ich použiť</h2>
+          <ul class="list">
+            <li>pri návrhu novej infraštruktúry,</li>
+            <li>pri audite existujúceho prostredia,</li>
+            <li>pri stabilizácii alebo zlepšovaní prevádzky,</li>
+            <li>pred nasadením nových služieb alebo zmien.</li>
+          </ul>
+        </div>
+
+        <div class="card pad">
+          <h2>Čo vám pomôžu vyriešiť</h2>
+          <ul class="list">
+            <li>prehľad o tom, čo je potrebné skontrolovať,</li>
+            <li>rýchlejší začiatok práce bez improvizácie,</li>
+            <li>lepšiu komunikáciu medzi technickým a business prístupom.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
   </main>
 </body>
 </html>
