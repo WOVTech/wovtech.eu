@@ -26,9 +26,9 @@ const pagesConfig = {
     keywords: 'kontakt WOV Tech, IT konzultácia, kontaktný formulár, support'
   },
   'navrh-infrastruktury.html': {
-    title: 'Návrh IT infraštruktúry | WOV Tech',
+    title: 'Návrh IT infrastruktury | WOV Tech',
     description: 'Pomáhame malým, stredným a veľkým firmám navrhnúť prehľadnú, stabilnú a bezpečnú IT infraštruktúru.',
-    keywords: 'návrh infraštruktúry, IT konzultácia, stabilnú IT, bezpečnú IT, IT systém'
+    keywords: 'návrh IT infrastruktury, IT konzultácia, stabilnú IT, bezpečnú IT, IT systém'
   },
   '404.html': {
     title: '404 - Stránka nenájdená | WOV Tech',
