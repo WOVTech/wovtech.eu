@@ -186,6 +186,16 @@ small{color:var(--muted)}
   gap: 4px;
 }
 
+.dropdown .submenu .submenu-title{
+  display:block;
+  padding: 4px 10px 8px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
 .dropdown .submenu a{
   display:block;
   padding: 8px 10px;
