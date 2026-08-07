@@ -285,9 +285,15 @@ small{color:var(--muted)}
   color: rgba(15,23,42,.90);
 }
 
-.dropdown .submenu a:hover{
-  background: rgba(15,23,42,.06);
-  color: #0f172a;
+.dropdown .submenu a:hover,
+.dropdown .submenu a:focus-visible{
+  background:rgba(0,136,245,.08);
+  color:#0759a6;
+}
+
+.dropdown .submenu a:focus-visible{
+  outline:2px solid #00aaff;
+  outline-offset:1px;
 }
 
 @media (max-width: 900px){
@@ -730,6 +736,19 @@ main#content > *{
   border-color:transparent;
   background:rgba(0,136,245,.08);
   color:#0759a6 !important;
+}
+
+.header .menu > .dropdown.is-open > .drop-trigger{
+  background:rgba(0,136,245,.08);
+  box-shadow:none;
+  color:#0759a6 !important;
+}
+
+.header .menu.has-open-dropdown > a[aria-current="page"],
+.header .menu.has-open-dropdown > .dropdown:not(.is-open) > a[aria-current="page"]{
+  background:transparent;
+  box-shadow:none;
+  color:rgba(15,23,42,.86) !important;
 }
 
 /* AKTÍVNA POLOŽKA V MENU */

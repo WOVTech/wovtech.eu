@@ -1,9 +1,39 @@
 document.addEventListener('DOMContentLoaded', () => {
   const dropdowns = document.querySelectorAll('[data-dropdown]');
+  const menu = document.querySelector('.header .menu');
+
+  if (menu) {
+    const currentPath = window.location.pathname.replace(/\/index\.html$/, '/');
+    const sectionPath = ['/sluzby/', '/clanky/', '/prirucky/']
+      .find((path) => currentPath.startsWith(path));
+    const activePath = sectionPath || currentPath;
+
+    Array.from(menu.children).forEach((item) => {
+      const link = item.matches('a')
+        ? item
+        : item.querySelector(':scope > [data-dropdown-trigger]');
+
+      if (!link) return;
+
+      const linkPath = new URL(link.href, window.location.origin).pathname
+        .replace(/\/index\.html$/, '/');
+
+      link.removeAttribute('aria-current');
+      if (linkPath === activePath) link.setAttribute('aria-current', 'page');
+    });
+  }
+
+  const syncOpenDropdownState = () => {
+    menu?.classList.toggle(
+      'has-open-dropdown',
+      Boolean(document.querySelector('[data-dropdown].is-open'))
+    );
+  };
 
   const closeDropdown = (dropdown) => {
     dropdown.classList.remove('is-open');
     dropdown.querySelector('[data-dropdown-trigger]')?.setAttribute('aria-expanded', 'false');
+    syncOpenDropdownState();
   };
 
   const closeOtherDropdowns = (currentDropdown) => {
@@ -27,6 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (shouldOpen) closeOtherDropdowns(dropdown);
       dropdown.classList.toggle('is-open', shouldOpen);
       trigger.setAttribute('aria-expanded', String(shouldOpen));
+      syncOpenDropdownState();
     };
 
     trigger.addEventListener('click', (event) => {
