@@ -1,11 +1,6 @@
 {
   "scripts": {
-    "seo:update": "node scripts/update-seo.js",
-    "seo:add-keywords": "node scripts/add-keywords.js",
-    "seo:add-og": "node scripts/add-og-tags.js",
-    "seo:fix-duplicates": "node scripts/fix-duplicates.js",
-    "img:optimize": "node scripts/optimize-images.js",
-    "html:update-webp": "node scripts/update-html.js"
+    "img:optimize": "node scripts/optimize-images.js"
   },
   "devDependencies": {
     "sharp": "^0.34.5"

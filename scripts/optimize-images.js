@@ -28,16 +28,11 @@ const images = {
   'logo-full.png': {
     // Logo - zmenšiť na 800x412
     resize: { width: 800, height: 412, fit: 'contain' },
-    formats: ['png', 'webp']
+    formats: ['png']
   },
   'logo-mark.png': {
     // Logo mark - ponechať ale komprimovať
-    formats: ['png', 'webp']
-  },
-  'logo.png': {
-    // Logo - zmenšiť a optimalizovať
-    resize: { width: 800, height: 416, fit: 'contain' },
-    formats: ['png', 'webp']
+    formats: ['png']
   }
 };
 
