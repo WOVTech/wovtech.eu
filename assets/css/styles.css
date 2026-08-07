@@ -175,10 +175,10 @@ small{color:var(--muted)}
   padding: 8px;
   border: 1px solid var(--line);
   border-radius: 14px;
-  background: rgba(16, 26, 45, .82);
+  background: rgba(16, 26, 45, .78);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  box-shadow: var(--shadow);
+  box-shadow: none;
   z-index: 20;
 }
 
