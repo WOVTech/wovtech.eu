@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Log management: what to consider | WOV Tech</title>
-  <meta name="description" content="Questions before designing management logs: log sources, normalization, retention, cost, sensitive data, ownership and use in incident and audit." />
+  <meta name="description" content="Questions before designing management logs: log sources, normalisation, retention, cost, sensitive data, ownership and use in incident and audit." />
   <meta name="robots" content="index, follow" />
 
   <link rel="canonical" href="https://wovtech.eu/guides/log-management.html" />
@@ -19,7 +19,7 @@
 
   <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="Log management: what to consider | WOV Tech" />
-  <meta property="og:description" content="Questions before designing management logs: log sources, normalization, retention, cost, sensitive data, ownership and use in incident and audit." />
+  <meta property="og:description" content="Questions before designing management logs: log sources, normalisation, retention, cost, sensitive data, ownership and use in incident and audit." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://wovtech.eu/guides/log-management.html" />
   <meta property="og:locale" content="en_GB" />
@@ -30,7 +30,7 @@
   <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Log management: what to consider | WOV Tech" />
-  <meta name="twitter:description" content="Questions before designing management logs: log sources, normalization, retention, cost, sensitive data, ownership and use in incident and audit." />
+  <meta name="twitter:description" content="Questions before designing management logs: log sources, normalisation, retention, cost, sensitive data, ownership and use in incident and audit." />
   <meta name="twitter:image" content="https://wovtech.eu/assets/img/logo-full.png" />
 
   <meta name="theme-color" content="#0b1220" />
@@ -120,14 +120,14 @@
 
           <h1>Log management: what to consider before design</h1>
           <p>
-            Logos are only valuable when they support <b>incident triage</b>, <b>auditability</b>
+            Logs are only valuable when they support <b>incident triage</b>, <b>auditability</b>
             and <b>operational decisions</b>. Before designing the solution, clarify its purpose, ownership,
             and cost model (retention, volumes, indexes).
           </p>
 
           <div class="notice" style="margin-top:16px">
-            The logos answer <b>why</b> the incident happened a <b>where</b> arose.
-            Without clear use-cases, normalization and retention, logos become expensive storage with no value.
+            Logs help explain <b>why</b> an incident happened and <b>where</b> it originated.
+            Without clear use-cases, normalisation and retention, logs become expensive storage with no value.
             The minimum standard is a few critical resources, common fields, reasonable retention and clear pipeline ownership.
           </div>
         </div>
@@ -142,7 +142,7 @@
             <li><b>Use-cases:</b> what do you really need logs for (incidents, audit, forensic analysis, performance)?</li>
             <li><b>Sources:</b> which logs are critical (identity/auth, DNS, edge/WAF/LB, systems, applications, DB)?</li>
             <li><b>Availability:</b> can you quickly find and correlate logs in an incident?</li>
-            <li><b>Normalization:</b> do you have agreed key fields (user, host, service, request_id, severity)?</li>
+            <li><b>Normalisation:</b> do you have agreed key fields (user, host, service, request_id, severity)?</li>
             <li><b>Retention:</b> operative vs. audit - what to keep in the short term and what in the long term?</li>
             <li><b>Costs:</b> do you know the volumes (GB/day), growth and price for ingest, storage and browsing?</li>
             <li><b>Sensitive data:</b> how do you handle PII, cloaking, access and auditing of logo access?</li>
@@ -205,7 +205,7 @@
     "url": "https://wovtech.eu",
     "email": "contact@wovtech.eu",
     "areaServed": "Worldwide",
-    "description": "Design and stabilization of IT infrastructure: DDI (DNS/DHCP/IPAM), NTP, cloud (AWS/Azure/GCP), infrastructure monitoring, log management and backup."
+    "description": "Design and stabilisation of IT infrastructure: DDI (DNS/DHCP/IPAM), NTP, cloud (AWS/Azure/GCP), infrastructure monitoring, log management and backup."
   }
   </script>
 

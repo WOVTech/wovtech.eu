@@ -117,8 +117,8 @@
           <h1>Access &amp; identity (IAM): auditability and control in infrastructure</h1>
           <p class="article-meta">Author: WOV Tech · Published 2/15/2026 · Updated 8/7/2026</p>
           <p>
-            IAM is the foundation of both security and operations. If it is not clear <b>who has what permissions</b>,
-            <b>for how long</b> and <b>how it is controlled</b>, the infrastructure remains unauditable and risky.
+            IAM is fundamental to both security and operations. If it is unclear <b>who has which permissions</b>,
+            <b>for how long</b> and <b>how access is controlled</b>, the infrastructure remains difficult to audit and unnecessarily risky.
           </p>
 
           <div class="notice" style="margin-top:16px">
@@ -134,13 +134,13 @@
         <div class="card pad">
           <h2>Key questions</h2>
           <ul class="list">
-            <li><b>Manage privileged accounts:</b> who has admin/root, where are the "break-glass" accounts and how are they used?</li>
-            <li><b>Lifecycle access:</b> how are authorizations created and terminated (joiner/mover/leaver)? Is it tied to HR/IDP?</li>
-            <li><b>Least privileges:</b> are roles and permissions designed according to responsibilities, or "all things to all people"?</li>
+            <li><b>Privileged accounts:</b> who has admin/root access, where are the "break-glass" accounts and how are they used?</li>
+            <li><b>Access lifecycle:</b> how are authorisations granted, changed and revoked (joiner/mover/leaver)? Is the process linked to HR and the identity provider?</li>
+            <li><b>Least privilege:</b> are roles and permissions based on responsibilities, or is excessive access granted by default?</li>
             <li><b>MFA and strong authentication:</b> is MFA mandatory for privileged roles, VPN, admin consoles and critical systems?</li>
-            <li><b>Audit and traceability:</b> do we have centralized audit logs (who changed what, when, from where) and can we find them in the event of an incident?</li>
+            <li><b>Audit and traceability:</b> do we have centralised audit logs (who changed what, when, from where) and can we find them in the event of an incident?</li>
             <li><b>Secrets &amp; certificates:</b> where are secrets stored (API keys, tokens, certificates), who rotates them and how often?</li>
-            <li><b>Suppliers:</b> are the access just-in-time (JIT), with revisions and separation from internal accounts?</li>
+            <li><b>Suppliers:</b> is supplier access granted just in time (JIT), reviewed regularly and separated from internal accounts?</li>
           </ul>
 
           <div class="hr"></div>
@@ -148,15 +148,15 @@
           <h2>Typical risks in practice</h2>
           <ul class="list">
             <li><b>Shared accounts and passwords:</b> there is no attribution of changes and incidents cannot be explained retrospectively.</li>
-            <li><b>Permanent admin rights:</b> privileged roles are "default", with no approval and no expiration time.</li>
-            <li><b>Non-existent revisions:</b> entitlements don't move for years, even if the team or supplier changes.</li>
+            <li><b>Permanent admin rights:</b> privileged roles are assigned by default, without approval or expiry.</li>
+            <li><b>Missing access reviews:</b> entitlements remain unchanged for years, even when a person changes team or a supplier relationship ends.</li>
             <li><b>Secrets in repositories:</b> keys in code or in non-rotating and ownerless configurations.</li>
-            <li><b>Audit logs out of reach:</b> logs are not centralized or are kept too short for investigation.</li>
+            <li><b>Audit logs out of reach:</b> logs are not centralised or are kept too short for investigation.</li>
           </ul>
 
           <p class="notice">
             The biggest shift will often come from the "minimum standard": personal accounts, MFA, separate privileged roles,
-            centralized audit logs and regular revisions of authorizations.
+            centralised audit logs and regular reviews of authorisations.
           </p>
 
           <div class="hr"></div>
@@ -176,8 +176,8 @@
         <div class="card pad">
           <h2>Do you need help?</h2>
           <p>
-            To design or stabilize access and identity in your infrastructure,
-            <b>get in touch with us</b> – we will advise you how to do it.
+            To design or stabilise access and identity in your infrastructure,
+            <b>get in touch with us</b> – we can advise you on how to do it.
           </p>
           <a class="cta" href="/contact.html">Contact WOV Tech</a>
         </div>
@@ -213,7 +213,7 @@
     "url": "https://wovtech.eu",
     "email": "contact@wovtech.eu",
     "areaServed": "Worldwide",
-    "description": "Design and stabilization of IT infrastructure: DDI (DNS/DHCP/IPAM), NTP, cloud (AWS/Azure/GCP), infrastructure monitoring, log management and backup."
+    "description": "Design and stabilisation of IT infrastructure: DDI (DNS/DHCP/IPAM), NTP, cloud (AWS/Azure/GCP), infrastructure monitoring, log management and backup."
   }
   </script>
   <script type="application/ld+json">

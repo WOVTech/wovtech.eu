@@ -8,7 +8,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>NTP - time infrastructure | WOV Tech</title>
-  <meta name="description" content="NTP and time infrastructure design: time sources, redundancy, drift monitoring and secure synchronization." />
+  <meta name="description" content="NTP and time infrastructure design: time sources, redundancy, drift monitoring and secure synchronisation." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://wovtech.eu/services/ntp.html" />
   <link rel="alternate" hreflang="en" href="https://wovtech.eu/services/ntp.html" />
@@ -17,7 +17,7 @@
 
   <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="NTP - time infrastructure | WOV Tech" />
-  <meta property="og:description" content="NTP and time infrastructure design: time sources, redundancy, drift monitoring and secure synchronization." />
+  <meta property="og:description" content="NTP and time infrastructure design: time sources, redundancy, drift monitoring and secure synchronisation." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://wovtech.eu/services/ntp.html" />
   <meta property="og:locale" content="en_GB" />
@@ -28,7 +28,7 @@
   <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="NTP - time infrastructure | WOV Tech" />
-  <meta name="twitter:description" content="NTP and time infrastructure design: time sources, redundancy, drift monitoring and secure synchronization." />
+  <meta name="twitter:description" content="NTP and time infrastructure design: time sources, redundancy, drift monitoring and secure synchronisation." />
   <meta name="twitter:image" content="https://wovtech.eu/assets/img/logo-full.png" />
   <meta name="theme-color" content="#0b1220" />
   <link rel="preload" href="/assets/img/hero-laptop.webp" as="image" type="image/webp" fetchpriority="high" />
@@ -116,7 +116,7 @@
           <h1>NTP: time infrastructure</h1>
           <p>
             Accurate and consistent time is fundamental to security, auditability and incident resolution.
-            NTP is among <b>tier-0 services</b>, whose failure has a chain effect.
+            NTP is a <b>tier-0 service</b> whose failure can have cascading effects.
           </p>
         </div>
       </div>
@@ -125,24 +125,24 @@
     <section class="section">
       <div class="container two-col">
         <div class="card pad">
-          <h2>What we typically deal with</h2>
+          <h2>What we typically address</h2>
           <ul class="list">
             <li>design of time resources (redundancy, reliability, on-prem / cloud / hybrid)</li>
-            <li>monitoring of synchronization and time drift</li>
+            <li>monitoring of synchronisation and time drift</li>
             <li>NTP hardening and secure client configurations</li>
-            <li>procedures for a wrong time incident</li>
+            <li>procedures for incidents caused by incorrect system time</li>
           </ul>
         </div>
 
         <div class="card pad">
           <h2>Why is it important?</h2>
           <p>
-            Exact time is the basis of security (SSL certificates, Kerberos), auditability and incident resolution.
-            If the time is not synchronized, problems from authentication to backup quickly appear.
+            Accurate time is the basis of security (SSL certificates, Kerberos), auditability and incident resolution.
+            If system time is not synchronised, failures can affect everything from authentication to backups.
           </p>
           <p>
             <b>Examples:</b> expired SSL certificates due to wrong time, Kerberos authentication failure,
-            mistimed incidents and audit discrepancies.
+            incorrectly timestamped incidents and audit discrepancies.
           </p>
         </div>
 
@@ -152,8 +152,8 @@
             <li><b>Stratum:</b> choosing reliable sources of time</li>
             <li><b>Redundancy:</b> multiple NTP servers and failover strategy</li>
             <li><b>Monitoring:</b> drift tracking and anomaly alerts</li>
-            <li><b>Security:</b> NTP authentication, firewall rules, limitation of misuse</li>
-            <li><b>Tests:</b> verification of synchronization in both real and test conditions</li>
+            <li><b>Security:</b> NTP authentication, firewall rules and controls against misuse</li>
+            <li><b>Tests:</b> verification of synchronisation in production and test environments</li>
           </ul>
         </div>
 
@@ -162,31 +162,31 @@
           <ul class="list">
             <li><b>Without redundancy:</b> one NTP server = risk in case of failure</li>
             <li><b>Bad configuration:</b> the firewall blocks traffic or different OSes behave differently</li>
-            <li><b>Without monitoring:</b> drift will only become apparent in the event of an incident</li>
+            <li><b>Without monitoring:</b> drift may only become apparent during an incident</li>
             <li><b>Security flaws:</b> unnecessarily open services and weak access restrictions</li>
           </ul>
         </div>
 
         <div class="card pad">
           <h2>Frequently asked questions</h2>
-          <p><b>How bad is a 5 minute desync?</b></p>
-          <p>Very bad. SSL fails, Kerberos doesn't work, and auditing is no longer trusted. In production, time should be synchronized with minimal deviation.</p>
+          <p><b>How bad is a five-minute time difference?</b></p>
+          <p>Very bad. SSL fails, Kerberos doesn't work, and auditing is no longer trusted. In production, time should be synchronised with minimal deviation.</p>
           <p><b>Do we need GPS or Stratum-1 server?</b></p>
           <p>Not always. It depends on the environment, accuracy requirements and the availability of reliable upstream sources. However, they make sense in some scenarios.</p>
-          <p><b>How is synchronization tested?</b></p>
-          <p>By checking the state of synchronization, monitoring the offset and regularly auditing the configuration and behavior of clients.</p>
+          <p><b>How is synchronisation tested?</b></p>
+          <p>By checking the state of synchronisation, monitoring the offset and regularly auditing the configuration and behaviour of clients.</p>
         </div>
 
         <div class="card pad">
-          <h2>How we work with it</h2>
+          <h2>How we work</h2>
           <p>
             <b>Analysis:</b> we review the existing NTP environment and identify risks.
           </p>
           <p>
-            <b>Proposal:</b> we will recommend architecture, monitoring and incident procedures.
+            <b>Design:</b> we will recommend architecture, monitoring and incident procedures.
           </p>
           <p>
-            <b>Stabilization:</b> we help with configuration, testing, documentation and team training.
+            <b>Stabilisation:</b> we help with configuration, testing, documentation and team training.
           </p>
         </div>
 
@@ -237,7 +237,7 @@
     "url": "https://wovtech.eu",
     "email": "contact@wovtech.eu",
     "areaServed": "Worldwide",
-    "description": "Design and stabilization of IT infrastructure: DDI (DNS/DHCP/IPAM), NTP, cloud (AWS/Azure/GCP), infrastructure monitoring, log management and backup."
+    "description": "Design and stabilisation of IT infrastructure: DDI (DNS/DHCP/IPAM), NTP, cloud (AWS/Azure/GCP), infrastructure monitoring, log management and backup."
   }
   </script>
   <script type="application/ld+json">
