@@ -18,12 +18,12 @@ const images = {
   'hero-datacenter.png': {
     // Hero background - resize to 1024x768 and create WebP
     resize: { width: 1024, height: 768, fit: 'cover' },
-    formats: ['png', 'webp']
+    formats: ['png', 'webp', 'avif']
   },
   'hero-laptop.png': {
     // Hero background - resize to 1280x800 and create WebP
     resize: { width: 1280, height: 800, fit: 'cover' },
-    formats: ['png', 'webp']
+    formats: ['png', 'webp', 'avif']
   },
   'logo-full.png': {
     // Logo - resize to 800x412
@@ -90,6 +90,26 @@ async function optimizeImages() {
 
         const webpSize = fs.statSync(webpPath).size;
         console.log(`   ✅ WebP: ${(webpSize / 1024).toFixed(1)} KB`);
+      }
+
+      // Create a smaller AVIF version for modern browsers.
+      if (config.formats.includes('avif')) {
+        const avifPath = inputPath.replace('.png', '.avif');
+        let processor = sharp(inputPath);
+
+        if (config.resize) {
+          processor = processor.resize(config.resize.width, config.resize.height, {
+            fit: config.resize.fit,
+            withoutEnlargement: true
+          });
+        }
+
+        await processor
+          .avif({ quality: 55, effort: 6 })
+          .toFile(avifPath);
+
+        const avifSize = fs.statSync(avifPath).size;
+        console.log(`   ✅ AVIF: ${(avifSize / 1024).toFixed(1)} KB`);
       }
     } catch (error) {
       console.log(`   ❌ Chyba: ${error.message}`);
