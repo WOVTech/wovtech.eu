@@ -77,7 +77,7 @@
     }
 
     if (!data.privacy) {
-      showMessage('You must agree to the privacy policy', 'error');
+      showMessage('Please confirm that you have read the privacy information', 'error');
       return;
     }
 
@@ -105,7 +105,7 @@
       });
 
       if (response.ok) {
-        showMessage('✓ Thank you! Your message has been sent. We will reply as soon as possible.', 'success');
+        showMessage('✓ Thank you! Your message has been sent.', 'success');
         form.reset();
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;
