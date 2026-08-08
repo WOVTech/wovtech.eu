@@ -114,7 +114,7 @@
       }
     } catch (error) {
       console.error('Form submission error:', error);
-      showMessage('The message could not be sent. Please try again later or email kontakt@wovtech.sk.', 'error');
+      showMessage('The message could not be sent. Please try again later or email contact@wovtech.eu.', 'error');
       submitBtn.textContent = originalText;
       submitBtn.disabled = false;
     }
